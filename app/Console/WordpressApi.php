@@ -67,14 +67,19 @@ class WordpressApi
         $article->publishes_at = $this->carbonDate($data->date);
         $article->created_at = $this->carbonDate($data->date);
         $article->updated_at = $this->carbonDate($data->modified);
-        $article->save();
+
+        try {
+            $article->save();
+        } catch (\Exception $e) {
+            // echo $e->getTraceAsString();
+        }
 
 
         $this->syncAuthor($article, $data->_embedded->author);
         $this->syncCategory($article, $data->_embedded->{"wp:term"});
         $this->syncTags($article, $data->_embedded->{"wp:term"});
 
-        exit;
+        // exit;
     }
 
     protected function carbonDate($date)
