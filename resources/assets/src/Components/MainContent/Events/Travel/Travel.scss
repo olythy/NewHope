@@ -1,0 +1,418 @@
+.TravelBanner{
+	background:url("/storage/Gfx/Events/Travel/travelBanner-bgD.jpg");
+	@include bg-cover-pos;
+	display:flex;
+	margin:1em 0;
+	@media #{$larg} {
+		margin:1.5em 0;
+	}
+}
+
+.TravelBanner--wrp{
+	margin:auto;
+	padding:4em 0;
+	text-align:center;
+
+	h2{
+		margin-bottom:.75em;
+	}
+}
+
+.Travel--wrp{
+	margin-bottom:2em;
+	@media #{$larg} {
+		margin-bottom:3em;
+	}
+}
+
+.Travel--hotels{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: space-between;
+	@media #{$medium-40} {
+		grid-template-columns: repeat(auto-fill, 48.75%);
+	}
+	@media #{$larg-60} {
+		grid-template-columns: repeat(auto-fill, 31.75%);
+	}
+	@media #{$extra-larg} {
+		grid-template-columns: repeat(auto-fill, 304px);
+		grid-gap: 0 1em;
+	}
+}
+
+//HOTELCARD
+
+.HotelCard{
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
+	margin-bottom:1em;
+	align-self:flex-start;
+	&:hover{
+		box-shadow: 0px 4px 16px rgba($black, 0.1);
+    	cursor:pointer;
+    	transition: all $transition-fast;
+	}
+	@media #{$larg} {
+		margin-bottom:1.5em;
+	}
+
+	.HotelCard--img{
+		@include img-crop--parent(230px);
+		img{
+			@include img-crop;
+		}
+	}
+
+	.HotelCard--details{
+		padding:1em;
+	}
+
+	&.hd{
+		.HotelCard--details---wrp{
+			max-height:90px;
+			overflow:hidden;
+			transition:all $transition-fast;
+		}		
+	}
+
+	.HotelCard--details---wrp{
+		max-height:none;
+		transition:all $transition-fast;
+		.HotelCard--summary{
+			margin-bottom:1.5em;
+			span{
+				margin:.5em 0;
+				color:$grey2;
+				strong{
+					display:inline-block;
+					margin:0;
+					color:$black;
+					font-weight:bold;
+				}
+			}
+			h6{
+				color:$grey2;
+				font-weight:normal;
+			}
+		}
+
+		.HotelCard--roomType{
+			margin-bottom:1.5em;
+		}
+
+		button{
+			width:100%;
+		}
+	}
+
+	.HotelCard--read{
+		font-size:.875em;
+		margin-top:.5em;
+		color:$light-blue;
+		cursor:pointer;
+	}
+}
+
+.HotelCard--room{
+	background:$grey5;
+	padding:.5em 1em;
+	margin:.5em 0;
+	h6{
+		font-weight:normal;
+		strong{
+			display:inline-block;
+			margin:0;
+			color:$black;
+			font-weight:bold;
+		}
+	}
+}
+
+.Hotel-categ{
+	background:$light-blue;
+	color:$white;
+	padding:.25em .5em;
+	margin-right:1em;
+	align-self:flex-start;
+}
+
+.HotelCard--rates{
+	padding-bottom:1.5em;
+	span{
+		color:$grey2;
+		font-weight:normal;
+	}
+}
+
+.HotelCard--contact{
+	padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid $grey4;
+}
+
+.HotelCard--phone{
+	position:relative;
+	display:flex;
+	padding-left:1.5em;
+	flex-direction:column;
+	@media #{$medium} {
+		flex-direction:row;
+	}
+	&:before{
+		content:url("/storage/Gfx/Events/Travel/HotelCard-phone.svg");
+		position:absolute;
+		left:0;
+		top:2px;
+	}
+}
+.HotelCard--mail{
+	display:flex;
+	margin-top: 1em;
+	padding-left:1.5em;
+	position:relative;
+	flex-direction:column;
+	@media #{$medium} {
+		flex-direction:row;
+	}
+	&:before{
+		content:url("/storage/Gfx/Events/Travel/HotelCard-mail.svg");
+		position:absolute;
+		left:0;
+		top:1px;
+	}
+}
+
+.HotelCard--divider{
+	margin:1.5em 0;
+	text-align:center;
+	position:relative;
+	&:before{
+		content: '';
+	    display: block;
+	    width: 40%;
+	    height: 1px;
+	    background: $grey4;
+	    position: absolute;
+	    left: 0;
+	    top: 50%;
+	};
+	&:after{
+		content: '';
+	    display: block;
+	    width: 40%;
+	    height: 1px;
+	    background: $grey4;
+	    position: absolute;
+	    right: 0;
+	    top: 50%;
+	}
+}
+
+
+//HIGHLIGHTED HOTEL
+
+.HotelHighLightCard{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:column;
+	flex-basis:100%;
+	margin-bottom:3em;
+	@media #{$larg} {
+		flex-direction:row;
+		justify-content:space-between;
+		margin-bottom:4.5em;
+	}
+
+	button{
+		width:100%;
+		@media #{$medium} {
+			width:auto;
+		}
+	}
+
+	.HotelCard--divider{
+		@media #{$larg} {
+			display:none;
+		}
+	}
+
+	.HotelHighLightCard--img{
+		@include img-crop--parent(430px);
+		img{
+			@include img-crop;
+		}
+		@media #{$larg} {
+			height:auto;
+			flex-basis:40%;
+		}
+	}
+
+	.HotelHighLightCard--shortInfo{
+		color: $white;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	display: flex;
+    	flex-direction: column;
+    	height: 100%;
+    	width: 100%;
+    	padding: 1em;
+    	@media #{$larg} {
+			display:none;
+		}
+		.HotelHighLightCard--shortName{
+			position:absolute;
+			bottom:1em;
+		}
+	}
+
+	.HotelHighLightCard--details{
+		flex-direction:column;
+		flex-basis:57%;
+		@media #{$larg} {
+			display:flex;
+		}
+		@media #{$extra-larg} {
+			padding-left:0;
+		}
+		.HotelCard--room{
+			@media #{$medium} {
+				width:250px;
+			}
+		}
+	}
+
+	.HotelHighLightCard--Bookvia-and-rates{
+		flex-basis:100%;
+		@media #{$larg} {
+			margin-top:1.5em;
+		}
+		.HotelHighLightCard--BookVia---wrp{
+			display:flex;
+			flex-direction:column;
+			margin-bottom:1.5em;
+			@media #{$larg} {
+				flex-direction:row;
+				margin-bottom:0;
+			}
+			.HotelHighLightCard--BookVia{
+				margin-right:.5em;
+				color:$grey2;
+				font-weight:normal;
+			}
+			.HotelCard--mail{
+				@media #{$larg} {
+					margin-top:0;
+					margin-left:1.5em;
+				}
+			}
+		}
+		.HotelCard--rates{
+			padding-bottom:0;
+			padding-top:1.5em;
+			border-top:1px solid $grey4; 
+			@media #{$larg} {
+				border-top:none;
+				margin-top:.5em;
+				padding-top:0;
+			}
+		}
+	}
+
+	.HotelHighLightCard--name{
+		display:none;
+		@media #{$larg} {
+			display:flex;
+		}
+		h1{
+			font-size:4.5em;
+		}
+	}
+	.HotelHighLightCard--address{
+		display:none;
+		@media #{$larg} {
+			display:flex;
+			margin:1.5em 0;
+		}
+		span{
+			margin:auto 0;
+		}
+	}
+	.HotelHighLightCard--hotelContent{
+		margin:1.5em 0;
+		@media #{$extra-larg} {
+			max-width:85%;
+			margin-top:0;
+		}
+	}
+}
+
+//TRAVELMAP
+
+.TravelMap{
+	display:flex;
+	flex-direction:column;
+	margin-bottom:1em;
+	@media #{$larg} {
+		flex-direction:row;
+		margin-bottom:1.5em;
+	}
+	.TravelMap--img{
+		@include img-crop--parent(auto);
+		flex-basis:386px;
+		img{
+			@include img-crop;
+		}
+	}
+	.TravelMap--venue{
+		flex-basis:60%;
+		padding:3em 1.5em;
+		background:$light-blue;
+		h1{
+			color:$white;
+			margin-bottom:.25em;
+			line-height:1em;
+		}
+		p{
+			color:$white;
+		}
+	}
+}
+
+//AMERICA COLOR 
+.America{
+	.TravelMap .TravelMap--venue{
+		background:$red;
+	}
+	.Hotel-categ{
+		background:$red;
+	}
+}
+
+.Travel{
+	.TextBox{
+		display:flex;
+		flex-direction:column;
+		margin-bottom:0;
+		@media #{$larg} {
+			flex-direction:row;
+			justify-content:space-between;
+		}
+		.BigBox{
+			flex-basis:55%
+		}
+		.TextBox--Text{
+			flex-basis:40%;
+			margin:auto 0;
+		}
+	}
+	.Intro--wrp{
+		@media #{$larg} {
+			margin-bottom:1.5em;
+		}
+	}
+}
+
+
+
+

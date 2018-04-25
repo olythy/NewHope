@@ -56,9 +56,9 @@ class LoginModal extends Component {
 					<h6 onClick={this.toggleState} className="ModalContent--changer">{this.state.hasAccount ? "Sign up" : "Log in"}</h6>
 				</div>
 				<div className="ModalContent--socialLogin">
-					<div className="socialLogin--linkedin"><a href="login/linkedin">Log in with linkedin</a></div>
-					<div className="socialLogin--google"><a href="login/google">Log in with google</a></div>
-					<div className="socialLogin--facebook"><a href="login/facebook">Log in with facebook</a></div>
+					<div className="socialLogin--linkedin"><a href="login/linkedin">{this.state.hasAccount ? "Log in" : "Sign up"} with linkedin</a></div>
+					<div className="socialLogin--google"><a href="login/google">{this.state.hasAccount ? "Log in" : "Sign up"} with google</a></div>
+					<div className="socialLogin--facebook"><a href="login/facebook">{this.state.hasAccount ? "Log in" : "Sign up"} with facebook</a></div>
 				</div>
 				<div className="ModalContent--OR">
 					<h5>OR</h5>

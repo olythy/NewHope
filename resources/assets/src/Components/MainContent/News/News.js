@@ -15,7 +15,7 @@ class News extends Component {
             <HeaderSlider />
             <CategSlider direction={this.props.direction}/>
             <div className="Layout-width">
-                <NewsLatestPopular showCategs seeAll>
+                <NewsLatestPopular name="Latest" stripe seeAll>
                     <NewsCard />
                     <NewsCard />
                     <NewsCard />
@@ -31,9 +31,20 @@ class News extends Component {
                     <NewsCategory name="Learning"/>
                     
                 </div>
-                <NewsCategory name="Employee Experience" src="/storage/Gfx/News/news-defaultIMG2.jpg" />
+                <NewsCategory name="Recruitment" src="/storage/Gfx/News/news-defaultIMG3.jpg" />
+                <NewsLatestPopular name="Going Digital" stripe seeAll>
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                </NewsLatestPopular>
                 <NewsLetterMobileAppBanner />
-                <NewsCategory name="Smart Data" src="/storage/Gfx/News/news-defaultIMG4.jpg" />
+                <NewsLatestPopular name="Popular" stripe seeAll>
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                    <NewsCard />
+                </NewsLatestPopular>
             </div>
         </section>
         )

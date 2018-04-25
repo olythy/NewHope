@@ -36,30 +36,30 @@ class CategSlider extends Component {
 	render(){
 		const settings = {
 	      dots: false,
-	      infinite: true,
+	      infinite: false, //true
 	      speed: 500,
-	      slidesToShow: 4,
-	      slidesToScroll: 4,
+	      slidesToShow: 8,
+	      slidesToScroll: 1, //4
 	      initialSlide: 0,
 	      responsive: [{
 	        breakpoint: 1024,
 	        settings: {
-	          slidesToShow: 3,
-	          slidesToScroll: 3,
-	          infinite: true,
+	          //slidesToShow: 7,
+	          slidesToScroll: 1, //3
+	          infinite: false, //true
 	          dots: true
 	        }
 	      }, {
 	        breakpoint: 600,
 	        settings: {
-	          slidesToShow: 2,
-	          slidesToScroll: 2,
-	          initialSlide: 2
+	          slidesToShow: 4,
+	          slidesToScroll: 1, //2
+	          initialSlide: 1 //2
 	        }
 	      }, {
 	        breakpoint: 480,
 	        settings: {
-	          slidesToShow: 1,
+	          slidesToShow: 2.6,
 	          slidesToScroll: 1
 	        }
 	      }]
@@ -71,16 +71,16 @@ class CategSlider extends Component {
    		 		<section className="CategSlider stickywM">
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
-					        <div><Link to="#">All news</Link></div>
-					        <div><Link to="#">Future of Work</Link></div>
-					        <div><Link to="#">Smart Data</Link></div>
-					        <div><Link to="#">Recruitment</Link></div>
-					        <div><Link to="#">HR Tech Analysts</Link></div>
-					        <div><Link to="#">Employee Experience</Link></div>
-					        <div><Link to="#">Talent & Recruitment</Link></div>
-					        <div><Link to="#">Wellbeing & Engagement</Link></div>
-					        <div><Link to="#">Other Stuff</Link></div>
-					        <div><Link to="#">Whats this?</Link></div>
+					        <div><Link to="/news">All news</Link></div>
+					        <div><Link to="/news/categpage">Future of Work</Link></div>
+					        <div><Link to="/news/categpage">Smart Data</Link></div>
+					        <div><Link to="/news/categpage">Recruitment</Link></div>
+					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
+					        <div><Link to="/news/categpage">Employee Experience</Link></div>
+					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
+					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
+					        <div><Link to="/news/categpage">Other Stuff</Link></div>
+					        <div><Link to="/news/categpage">Whats this?</Link></div>
 					     </Slider>
 					</div>
 				</section>
@@ -90,16 +90,16 @@ class CategSlider extends Component {
    		 		<section className="CategSlider sticky">
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
-					        <div><Link to="#">All news</Link></div>
-					        <div><Link to="#">Future of Work</Link></div>
-					        <div><Link to="#">Smart Data</Link></div>
-					        <div><Link to="#">Recruitment</Link></div>
-					        <div><Link to="#">HR Tech Analysts</Link></div>
-					        <div><Link to="#">Employee Experience</Link></div>
-					        <div><Link to="#">Talent & Recruitment</Link></div>
-					        <div><Link to="#">Wellbeing & Engagement</Link></div>
-					        <div><Link to="#">Other Stuff</Link></div>
-					        <div><Link to="#">Whats this?</Link></div>
+					        <div><Link to="/news">All news</Link></div>
+					        <div><Link to="/news/categpage">Future of Work</Link></div>
+					        <div><Link to="/news/categpage">Smart Data</Link></div>
+					        <div><Link to="/news/categpage">Recruitment</Link></div>
+					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
+					        <div><Link to="/news/categpage">Employee Experience</Link></div>
+					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
+					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
+					        <div><Link to="/news/categpage">Other Stuff</Link></div>
+					        <div><Link to="/news/categpage">Whats this?</Link></div>
 					     </Slider>
 					</div>
 				</section>
@@ -109,16 +109,16 @@ class CategSlider extends Component {
    		 		<section className={this.props.className ? "CategSlider " + this.props.className : "CategSlider"}>
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
-					        <div><Link to="#">All news</Link></div>
-					        <div><Link to="#">Future of Work</Link></div>
-					        <div><Link to="#">Smart Data</Link></div>
-					        <div><Link to="#">Recruitment</Link></div>
-					        <div><Link to="#">HR Tech Analysts</Link></div>
-					        <div><Link to="#">Employee Experience</Link></div>
-					        <div><Link to="#">Talent & Recruitment</Link></div>
-					        <div><Link to="#">Wellbeing & Engagement</Link></div>
-					        <div><Link to="#">Other Stuff</Link></div>
-					        <div><Link to="#">Whats this?</Link></div>
+					        <div><Link to="/news">All news</Link></div>
+					        <div><Link to="/news/categpage">Future of Work</Link></div>
+					        <div><Link to="/news/categpage">Smart Data</Link></div>
+					        <div><Link to="/news/categpage">Recruitment</Link></div>
+					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
+					        <div><Link to="/news/categpage">Employee Experience</Link></div>
+					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
+					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
+					        <div><Link to="/news/categpage">Other Stuff</Link></div>
+					        <div><Link to="/news/categpage">Whats this?</Link></div>
 					     </Slider>
 					</div>
 				</section>

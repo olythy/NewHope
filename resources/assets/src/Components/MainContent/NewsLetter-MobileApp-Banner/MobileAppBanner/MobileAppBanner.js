@@ -4,7 +4,7 @@ const MobileAppBanner = () => (
 	<section className="MobileApp-Banner">
 	 	<div className="MobileApp-Banner--details">
 		 	<h2>Download our<br />mobile app</h2>
-			<p>Get all the latest content, quick and easy, tailored to only your preference.</p>
+			<p>Get all the latest content, quick and easy, tailored to your preferences.</p>
 			<button className="btnspn-w">
               <span className="border-top">
                 <span className="transparent"></span>

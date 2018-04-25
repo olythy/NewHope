@@ -28,7 +28,7 @@ class NewsLatestPopular extends Component {
 
     render(){
         return(
-            <div className="News--wrp">
+            <div className="News--wrp dflt">
                 <div className="Headline">
                     <div className="News--Title-and-Categs">
                         {this.props.name ? <div className="News--title">
@@ -39,7 +39,7 @@ class NewsLatestPopular extends Component {
                               <span className="border-top">
                                 <span className="transparent"></span>
                               </span>
-                                Latest
+                                {this.props.categOne}
                               <span className="border-bottom">
                                 <span className="transparent"></span>
                               </span>
@@ -48,13 +48,14 @@ class NewsLatestPopular extends Component {
                               <span className="border-top">
                                 <span className="transparent"></span>
                               </span>
-                                Popular
+                                {this.props.categTwo}
                               <span className="border-bottom">
                                 <span className="transparent"></span>
                               </span>
                             </button>
                         </div> : null }
                     </div>
+                    {this.props.stripe ? <div className="Stripe"></div> : null }
                     {this.props.seeAll ? <div className="seeAll">
                         <Link to="news">See all</Link>
                     </div> : null} 

@@ -1,0 +1,117 @@
+.Startup{
+	.Agenda--wrp{
+		margin:0;
+		padding-top:0;
+		@media #{$larg} {
+			padding-bottom:4.5em;
+		}
+	}
+
+	.Twitter--wrp{
+		margin-bottom:3em;
+		@media #{$larg} {
+			margin-bottom:4.5em;
+		}
+	}
+
+	.OneLine--About{
+		padding:3em 0;
+		@media #{$larg} {
+			padding:4.5em 0;
+		}
+		background: linear-gradient(180deg, rgba($grey5, 0.75) 0%, rgba($grey5, 0) 100%);
+		.OneLine--About---wrp{
+			display:flex;
+			justify-content:space-between;
+			flex-direction:column;
+			@media #{$larg} {
+				flex-direction:row;
+			}
+			.OneLine--About--text{
+				flex-basis:65%;
+				margin-bottom:1.5em;
+				@media #{$larg} {
+					margin-bottom:0;
+				}
+				button{
+					margin-top:2em;
+				}
+			}
+			.ImgBoxes--wrp{
+				@media #{$larg} {
+					flex-basis:263px;
+				}
+				.SmallBox{
+					padding:1em;
+					flex-basis:100%;
+					@media #{$larg} {
+						padding:2em;
+					}
+					> div {
+						margin:auto 0;
+					}
+					h2{
+						color:$white;
+						&:before{
+							display:none;
+						}
+					}
+					.SmallBox---wrp{
+						margin-top:.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
+.Startup-Banner{
+	background:url("/storage/Gfx/Startup/startup-bgD.jpg");
+	@include bg-cover-pos;
+	padding: 3em 1.5em;
+	margin:3em 0;
+	color:$white;
+	@media #{$larg} {
+		margin:4.5em 0;
+	}
+	p{
+		margin-top:1em;
+		margin-bottom:2em;
+		@media #{$extra-larg} {
+    		width:300px;
+    	}
+	}
+}
+
+.Exhibitors--wrp{
+	margin-bottom:2em;
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: space-between;
+	@media #{$medium-40} {
+		grid-template-columns: repeat(auto-fill, 31.75%);
+	}
+	@media #{$extra-larg} {
+		grid-template-columns: repeat(auto-fill, 304px);
+		grid-gap: 0 1em;
+		margin-bottom:3.5em;
+	}
+}
+
+.Startup--Jury{
+	margin-top:3em;
+	margin-bottom:2.5em;
+	@media #{$larg} {
+		margin-top:4.5em;
+		margin-bottom:3.5em;
+	}
+}
+
+.StartupHUB .GreyBG-72{
+	margin-bottom:3em;
+	@media #{$larg} {
+		margin-bottom:4.5em;
+	}
+}
+
+

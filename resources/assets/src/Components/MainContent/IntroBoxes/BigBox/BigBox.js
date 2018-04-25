@@ -1,9 +1,35 @@
-import React from 'react';
+import React,{Component} from 'react';
 
-const BigBox = props => (
-	<div className="BigBox">
-		<img src={props.src} alt="IMG" />
-	</div>
-)
+class BigBox extends Component {
+	
+	constructor(props) {
+    	super(props);
+  	}
+
+	render(){
+
+		let bigBoxContent = null;
+
+		if(this.props.title){
+			bigBoxContent = (
+				<div>
+					<h2>{this.props.title}</h2>
+					<div className="SmallBox---wrp">
+						{this.props.person ? <p>{this.props.person}</p> : null}
+						{this.props.jobTitle ? <span>{this.props.jobTitle}</span> : null}
+					</div>
+				</div>
+			)
+		}else if(this.props.src){
+			bigBoxContent = <img src={this.props.src} alt="IMG" />
+		}
+
+		return(
+			<div className={this.props.title ? "BigBox Testimonial" : "BigBox"}>
+				{bigBoxContent}
+			</div>
+		)
+	}
+}
 
 export default BigBox

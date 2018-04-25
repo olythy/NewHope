@@ -26,7 +26,7 @@
 
 @import './Components/MainContent/Breadcrumbs/Breadcrumbs';
 
-@import './Components/MainContent/Tickets/Tickets';
+@import './Components/MainContent/Events/Tickets/Tickets';
 
 @import './Components/MainContent/Twitter/Twitter';
 
@@ -41,12 +41,14 @@
 @import './Components/MainContent/Events/EventCard/EventCard';
 @import './Components/MainContent/Events/Speakers/Speakers';
 @import './Components/MainContent/Events/Speakers/SpeakerCard/SpeakerCard';
+@import './Components/MainContent/Events/Sponsors/Sponsors';
+@import './Components/MainContent/Events/Sponsors/SponsorCard/SponsorCard';
 @import './Components/MainContent/Events/Sponsors/HeadlineSponsorsBox/HeadlineSponsorsBox';
 
-@import './Components/MainContent/Startup/Startup';
-@import './Components/MainContent/Startup/StartupCard/StartupCard';
+@import './Components/MainContent/StartupHUB/Startup';
+@import './Components/MainContent/StartupHUB/StartupCard/StartupCard';
 
-@import './Components/MainContent/Travel/Travel';
+@import './Components/MainContent/Events/Travel/Travel';
 
 @import './Components/MainContent/PromoBox/PromoBox';
 

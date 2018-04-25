@@ -1,28 +1,35 @@
-import React from 'react'
+import React, {Component} from 'react'
 
+class IntroHeader extends Component {
 
-const IntroHeader = props => (
-	
-	<div className="MainContent--header nrml London">
-        <div className="Layout-width">
-     		<div className="MainContent--header---wrp">
-	    		<div className="MainContent--title">
-	        		<div className="MainContent--title--wrp">
-	        			<div className="Event--name">
-	        				<h5>UNLEASH Conference & Expo</h5>
-	        			</div>
-	        			<div className="Event--place-and-date">
-	        				<div className="Event-card-place"><h6>London  ·  ExCeL</h6></div>
-	        				<div className="Event-card-date"><h6>21-22. March 2019</h6></div>
-	        			</div>
-	        		</div>
-	        		<h1>Future of work goes to London!</h1>
-	        		<div className="Intro-text"><p>Unleash your people on our next conference and see where the world of HR is going.</p></div>
-	        		<button className="btn-fw">Book now</button>
-	    		</div>
-	    	</div>
-	    </div>
-	</div>
-)
+	render(){
+
+		const eventInfo = (
+			<div className="MainContent--title--wrp">
+    			<div className="Event--name">
+    				<span>{this.props.eventName}</span>
+    			</div>
+    			<div className="Event--place-and-date">
+    				<div className="Event-card-place"><span>{this.props.eventCity}<div className="DOT">&middot;</div>{this.props.eventVenue}</span></div>
+    				<div className="Event-card-date"><span>{this.props.eventDate}</span></div>
+    			</div>
+    		</div>
+		)
+
+		return(
+			<div className={this.props.cls ? "MainContent--header " + this.props.cls : "MainContent--header " }>
+		        <div className="Layout-width">
+		     		<div className="MainContent--header---wrp">
+			    		<div className="MainContent--title">
+			      			{this.props.eventName ? eventInfo : null}
+			        		<h1>{this.props.h1}</h1>
+			        		{this.props.children}
+			    		</div>
+			    	</div>
+			    </div>
+			</div>
+		)
+	}
+}
 
 export default IntroHeader

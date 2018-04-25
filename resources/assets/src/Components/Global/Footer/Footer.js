@@ -2,25 +2,31 @@ import React from 'react'
 import Menu from './Menu/Menu'
 import NewsLetter from './NewsLetter/NewsLetter'
 import Social from './Social/Social'
+import {Link} from 'react-router-dom'
 
 const Footer = props => (
   <footer className="App-footer">
   	<div className="Layout-width">
     	<div className="App-footer--logo">
-    		<img src="/storage/Gfx/Global/Footer/unleash-logoW.svg" alt="UNLEASH" />
+    		<Link to="/"><img src="/storage/Gfx/Global/Footer/unleash-logoW.svg" alt="UNLEASH" /></Link>
     	</div>
     	<div className="App-footer--menu__wrp">
 	    	<Menu />
-			<div>
+			<div className="App-footer--menu__wrp---followUs">
 				<p><strong>Follow us</strong></p>
 				<div className="newsLetter-and-Social">
 					<NewsLetter />
-					<Social />
+					<Social
+						srcFacebook="/storage/Gfx/Global/Footer/facebook.svg"
+						srcTwitter="/storage/Gfx/Global/Footer/twitter.svg"
+						srcLinkedin="/storage/Gfx/Global/Footer/linkedin.svg"
+						srcYoutube="/storage/Gfx/Global/Footer/youtube.svg"
+					/>
 				</div>
 			</div>
 		</div>
 		<div className="App-footer--copyright">
-		<span>&copy; 2013 - 2017 UNLEASH Group. Made with &#10084; in Budapest.</span>
+		<span>&copy; 2013 - 2017 HRN Kft. Made with &#10084; in Budapest.</span>
 		</div>
 	</div>
   </footer>

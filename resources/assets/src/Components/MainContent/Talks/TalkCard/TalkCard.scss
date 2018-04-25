@@ -2,41 +2,30 @@
 	display:flex;
 	flex-wrap:wrap;
 	background:$white;
-	border: 2px solid $grey4;
-	flex-basis: 100%;
-    margin: 1em 0;
+	width:300px;
+	margin-right:1em;
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
+
     &:hover{
+    	box-shadow: 0px 4px 16px rgba($black, 0.1);
     	cursor:pointer;
-    	background:rgba($red,0.02);
-    	h5{
-    		color:$red;
-    	}
     	transition: all $transition-fast;
     }
-    @media #{$medium} {
-    	flex-basis:49%;
-    }
-    @media #{$larg} {
-    	flex-basis:32%;
+    @media #{$larg-60} {
+    	width:auto;
+    	margin:0;
     }
 }
 
 .Talk-card--details{
 	padding:1em;
-	h5{
-		font-size:.8em;
-		@media #{$larg} {
-    		font-size:.8em;
-    	}
-    	@media #{$extra-larg} {
-    		font-size:initial;
-    	}
-	}
 }
 
 .Talk-card--preview{
 	position:relative;
+	width:100%;
 	&:after{
+		display:none;
 		content:url("/storage/Gfx/Talks/play.svg");
 		position: absolute;
 		top: 50%;
@@ -46,13 +35,9 @@
 }
 
 .Talk-card--category{
-	margin-top: auto;
-    margin-bottom: .5em;
+	margin:.5em 0;
     color:$red;
 	a{color:$red}
-	@media #{$extra-larg} {
-    	margin-top: 1em;
-    }
 }
 
 .Talk-card--date{

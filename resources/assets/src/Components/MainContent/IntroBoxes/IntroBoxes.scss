@@ -5,32 +5,57 @@
 	margin:3em 0;
 
 	@media #{$larg-60} {
-    	flex-direction:row;
+    	flex-direction:row-reverse;
+    	margin:4.5em 0;
     }
 }
 
 .ContentBox{
-		flex-basis:39%;
-		color:$white;
-		background:$dark-blue;
-		padding:1.5em;
+		display:flex;
+		flex-basis:40%;
+		padding:1.5em 0;
+		
+		@media #{$larg-60} {
+    		padding:1.5em;
+    	}
 
 		h2{
 			margin-bottom:.5em;
+			width:100%;
+		}
+
+		p{
+			margin:1.5em 0;
 		}
 
 		.ContentBox--wrp{
-			margin-bottom:2em;
+			margin:auto;
+		}
+
+		.ContentBox--inner{
+			display:flex;
+			flex-direction:column;
 		}
 
 		.ContentBox--topics{
 			margin-top:auto;
-			button{
-				margin: 0 1em 1em 0;
-			    padding: .75em;
-			    font-family: 'Lato';
-			    text-transform: none;
-			    font-size: .75em;
+			display:flex;
+			flex-wrap:wrap;
+			span{
+				border: 1px solid $grey5;
+				padding:.25em .5em;
+				margin-right: .75em;
+    			margin-bottom: .75em;
+    			&:hover{
+    				background:$white;
+    				button{
+    					color:$dark-blue;
+    					cursor:pointer;
+    				}
+    			}
+    			button{
+    				color:$white;
+    			}
 			}
 		}
 	}
@@ -39,10 +64,14 @@
 		display:flex;
 		justify-content:space-between;
 		flex-wrap:wrap;
-		flex-basis:59%;
+		flex-basis:57.5%;
 
 		.BigBox--wrp{
 			flex-basis:100%;
+			margin-bottom:1em;
+			@media #{$larg} {
+				margin-bottom:1.5em;
+			}
 		}
 		
 		.BigBox{
@@ -55,25 +84,195 @@
 
 		.SmallBox--wrp{
 			display:flex;
+			flex-wrap:wrap;
 			justify-content:space-between;
 			margin-top:auto;
 			flex-basis:100%;
 			background:$white;
+			span{
+				margin-top:.25em;
+			}
 
 		}
 
 		.SmallBox{
-			flex-basis:48%;
+			flex-basis:47.75%;
 			@include img-crop--parent($IntroBoxes-SmallBoxMobileIMG);
 			margin-bottom:1em;
 			@media #{$medium} {
 				height:$IntroBoxes-SmallBoxDesktopIMG;
 			}
+			@media #{$medium-40} {
+				flex-basis:48.5%;
+			}
 			@media #{$larg-60} {
 				margin-bottom:0;
+				flex-basis:47.75%;
 			}
+
 			img{
 				@include img-crop;
 			}
+		}
+
+		.Testimonial{
+			height:auto;
+			display:flex;
+			padding:1em;
+			background:$light-blue;
+			@media #{$medium} {
+				padding:1.5em;
+			}
+			@media #{$medium-40} {
+				padding:2em;
+			}
+
+			> div{
+				margin:auto;
+			}
+
+			h2{
+				text-shadow: 0px 1px 1px rgba($black, 0.25);
+				font-size:1.5em;
+				line-height:25px;
+				@media #{$medium} {
+					font-size:1.875em;
+					line-height:32px;
+				}
+				&::before{
+					content:url("/storage/Gfx/Testimonial/comaW.svg");
+					position: absolute;
+					left: 10px;
+					top: 10px;
+				}
+			}
+
+			.SmallBox---wrp{
+				margin-top:.5em;
+				color:$white;
+				p{
+					font-weight:bold;
+				}
+			}
+		}
+	}
+
+
+	//AMERICA COLOR
+	.America {
+		.ImgBoxes--wrp .Testimonial{
+			background:$red;
+			h2{
+				color:$white;
+			}
+			.SmallBox---wrp{
+				color:$black;
+			}
+		}
+	}
+
+	//EVENT
+
+	.EventPage {
+
+		.IntroBoxes{
+			@media #{$larg-60} {
+    			flex-direction:row;
+    		}
+		}
+		
+		.ContentBox{
+			background:$dark-blue;
+			color:$white;
+			padding:1.5em;
+			.ContentBox--wrp{
+				margin:0;
+			}
+		}
+
+		.SmallBox--wrp{
+			flex-wrap:nowrap;
+		}
+	}
+
+
+	// EVENT STARTUP
+
+	.Startup{
+
+		.IntroBoxes{
+			@media #{$larg-60} {
+				flex-direction:row;
+			}
+			.ImgBoxes--wrp .Testimonial{
+				h2{
+					color:$white;
+					&:before{
+						display:none;
+					}
+				}
+			}
+		}
+
+		.ContentBox{
+			padding-left:0;
+			button{
+				margin-top:1em;
+			}
+		}
+		.SmallBox--wrp{
+			flex-direction:row-reverse;
+		}
+
+	}
+
+	//EVENT SPEAKERS
+
+	.Speakers {
+
+		.IntroBoxes{
+			flex-direction:column;
+			@media #{$larg-60} {
+    			flex-direction:row;
+    		}
+		}
+
+		.ContentBox{
+			padding-top:0;
+			padding-bottom:3em;
+			@media #{$larg-60} {
+    			padding:0 1.5em;
+    		}
+		}
+
+		.ImgBoxes--wrp .SmallBox{
+			flex-basis:100%;
+			@media #{$medium-40} {
+    			flex-basis:47.75%;
+    		}
+		}
+	}
+
+	//ABOUT
+
+	.WhoWeAre{
+		.IntroBoxes{
+			flex-direction:column;
+			@media #{$larg-60} {
+				flex-direction:row;
+			}
+		}
+		.ContentBox{
+			padding-top:0;
+			margin-bottom:3em;
+			@media #{$larg-60} {
+    			padding:0 1.5em;
+    		}
+		}
+		.ImgBoxes--wrp .SmallBox{
+			flex-basis:100%;
+			@media #{$medium-40} {
+    			flex-basis:47.75%;
+    		}
 		}
 	}

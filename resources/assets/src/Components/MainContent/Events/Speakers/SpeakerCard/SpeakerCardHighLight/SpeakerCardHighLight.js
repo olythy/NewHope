@@ -1,47 +1,55 @@
-import React from 'react'
+import React,{Component} from 'react'
 
-const SpeakerCardHighLight = props => (
-
-	<div className="SpeakerCardHighLight">
-		<div className="SpeakerCardHighLight--img">
-     		<img src="/storage/Gfx/Events/Speakers/elon.png" alt="UNLEASH Speaker"/>
-     		<div className="SpeakerCardHighLight--shortIno">
-     			{/*<div className="SpeakerCardHighLight--categ-date-place">
-					<div className="categ"><span>Future of Work</span></div>
-					<div className="date"><span>Day 01 &middot; 14:30</span></div>
-					<div className="place"><span>Main Stage</span></div>
-				</div>*/}
-				<div className="SpeakerCardHighLight--shortName">
-					<h1>Elon<br />Musk</h1>
-					<span>Space X  &middot; CEO</span>
-				</div>
-     		</div>
-    	</div>
-		<div className="SpeakerCardHighLight--details">
-			<div className="SpeakerCardHighLight--wrp">
-				<div className="SpeakerCardHighLight--name-and-social">
-					<h1>Elon Musk</h1>
-					<div className="SpeakerCardHighLight--social">
-						<img className="Social--youtube" src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
-						<img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
-						<img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
+class SpeakerCardHighLight extends Component {
+	render(){
+		return(
+			<div className="SpeakerCardHighLight">
+				<div className="SpeakerCardHighLight--img">
+		     		<img src={this.props.speakerIMG} alt={this.props.speakerName}/>
+		     		{/*MOBIL INFO*/}
+		     		<div className="SpeakerCardHighLight--shortInfo">
+		     			<div className="ShortInfo--categ-date-place">
+							<div className="categ"><span>Keynote</span></div>
+							<div className="date"><span>Day 01 <div className="DOT">&middot;</div> 09:00</span></div>
+							<div className="place"><span>Main Stage</span></div>
+						</div>
+						<div className="SpeakerCardHighLight--shortName">
+							<h1>{this.props.speakerName}</h1>
+							<span>{this.props.jobTitle}<div className="DOT">&middot;</div>{this.props.company}</span>
+						</div>
+		     		</div>
+		    	</div>
+		    	{/*DESKTOP INFO*/}
+				<div className="SpeakerCardHighLight--details">
+					<div className="SpeakerCardHighLight--wrp">
+						<div className="SpeakerCardHighLight--name-and-social">
+							<h1>{this.props.speakerName}</h1>
+							<div className="SpeakerCardHighLight--social">
+								<img className="Social--youtube" src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
+								<img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
+								<img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
+							</div>
+						</div>
+						<div className="SpeakerCardHighLight--jobTitle">
+							<h5>{this.props.jobTitle}<div className="DOT">&middot;</div>{this.props.company}</h5>
+						</div>
+						<div className="SpeakerCardHighLight--categ-date-place">
+							<div className="categ"><span>Future of Work</span></div>
+							<div className="date"><span>Day 01 <div className="DOT">&middot;</div> 09:00</span></div>
+							<div className="place"><span>Main Stage</span></div>
+						</div>
+						<div className="SpeakerCardHighLight--speakContent">
+							<h4>{this.props.contentTitle}</h4>
+							<p>{this.props.contentText}</p>
+						</div>
+					</div>
+					<div className="SpeakerCardHighLight--bio">
+						<p>{this.props.bio}</p>
 					</div>
 				</div>
-				<div className="SpeakerCardHighLight--categ-date-place">
-					<div className="categ"><span>Future of Work</span></div>
-					<div className="date"><span>Day 01 &middot; 14:30</span></div>
-					<div className="place"><span>Main Stage</span></div>
-				</div>
-				<div className="SpeakerCardHighLight--speakContent">
-					<h4>How will AI shape the world for the better in 20 years</h4>
-					<p>Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to. Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how.</p>
-				</div>
 			</div>
-			<div className="SpeakerCardHighLight--bio">
-				<p>Elon Reeve Musk is a South African-American business magnate, investor, engineer, and inventor. He is the founder, CEO, and lead designer of SpaceX; co-founder, CEO, and product architect of Tesla Inc.; co-chairman of OpenAI; founder and CEO of Neuralink, and founder of The Boring Company.</p>
-			</div>
-		</div>
-	</div>
-)
+		)
+	}
+}
 
 export default SpeakerCardHighLight

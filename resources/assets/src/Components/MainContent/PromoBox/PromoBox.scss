@@ -9,9 +9,10 @@
 	margin-top:1em;
 	cursor:pointer;
 	color:$white;
-	@include img-crop--parent(230px);
+	@include img-crop--parent(220px);
 	@media #{$larg} {
-    	flex-basis:32%;
+    	flex-basis:31.75%;
+        margin-top:0;
     }
 
     img{
@@ -25,13 +26,47 @@
 
 .PromoBoxDetails--wrp{
 	position: absolute;
+    width:90%;
     left: 50%;
     top: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
 
-    button{
-        margin-top:1em;
+    h6{
+        font-weight:normal;
+        margin:.5em 0;
     }
 
+    button{
+        margin-top:1em;
+        &:hover{
+            border-color:$light-blue;
+            &:before{
+                background:$light-blue;
+            }
+            .border-top:after,.border-top:before,.border-bottom:after,.border-bottom:before{
+                background:$light-blue;
+            }
+        }
+    }
+
+}
+
+
+//STARTUP HUB
+
+.StartupHUB .PromoBoxes--wrp{
+    margin-bottom:3em;
+    @media #{$larg} {
+        margin-bottom:4.5em;
+    }
+}
+
+//TRAVEL
+
+.Travel .PromoBoxes--wrp{
+    margin-bottom:3em;
+    @media #{$larg} {
+        margin-bottom:4.5em;
+    }
 }

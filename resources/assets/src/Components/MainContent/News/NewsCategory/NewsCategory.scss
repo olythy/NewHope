@@ -11,13 +11,17 @@
 }
 
 .News--wrp{
-	margin:2.5em 0;
-	.seeAll a{
+	margin:1.5em 0;
+	@media #{$larg} {
+    	margin:2.25em 0;
+    }
+	width:100%;
+	/*.seeAll a{
 		color:$purple;
 		&:after{
 			content:url("/storage/Gfx/Global/seeAll-purple.svg");
 		}
-	}
+	}*/
 }
 
 .Categ{
@@ -26,29 +30,33 @@
     	flex-basis:50%;
     }
     @media #{$extra-larg} {
-    	flex-basis:57%;
+    	flex-basis:57.3%;
     }
 }
 .Pinned{
 	position:relative;
 	flex-basis:100%;
 	background:$grey5;
-	height:570px;
-	padding:1em;
+	height:615px;
+	padding:1.5em 1em;
 	@media #{$larg} {
     	flex-basis:45%;
     }
     @media #{$extra-larg} {
     	flex-basis:40%;
-    	height:620px;
+    }
+
+    .News-card{
+    	height:136px;
+    	margin-bottom:1em;
     }
 
     .Headline,.News--title{
     	background:none;
     }
 
-	.seeAll{
-		margin-top:1em;
+	.seeMore{
+		margin-top:.5em;
 		background:none;
 	}
 	&:after{
@@ -62,18 +70,19 @@
 
 	&.Saved{
 		&:after{
-			background: repeating-linear-gradient(-45deg, rgba($red, 0.4), rgba($red, 0.4) 2px, transparent 2px, transparent 4px);
+			background: repeating-linear-gradient(-45deg, $red, $red 2px, transparent 2px, transparent 4px);
 		}
 		&:before{
 			content:url("/storage/Gfx/bookmark.svg");
 			position:absolute;
+			z-index:2;
 			right:0;
 			top:0;
 		}
 	}
 	&.Recommended{
 		&:after{
-			background: repeating-linear-gradient(-45deg, rgba($light-blue, 0.4), rgba($light-blue, 0.4) 2px, transparent 2px, transparent 4px);
+			background: repeating-linear-gradient(-45deg, $light-blue, $light-blue 2px, transparent 2px, transparent 4px);
 		}
 	}
 }
@@ -83,9 +92,10 @@
 	flex-wrap:wrap;
 	justify-content:space-between;
 	flex-direction:column;
-	margin-top:2em;
+	margin-top:1em;
 	@media #{$larg} {
     	flex-direction:row;
+    	margin-top:1.5em;
     }
 }
 
@@ -97,15 +107,31 @@
 }
 
 .News--title{
-	background:$white;
 	h2{
-		padding-right:.5em;
+		padding-right:.75em;
+		white-space:nowrap;
 	}
 }
 .News--Categs{
-	background:$white;
+	display:flex;
 }
 
 .NewsCard--wrp---inner{
-	flex-basis:49%;
+	flex-basis:57.5%;
 }
+
+
+//LONDON DRAGSCROLL
+
+.EventPage .NewsCard--wrp{
+	overflow:auto;
+}
+
+
+//GREYBG NEWS MARGIN
+
+.GreyBG-72 .News--wrp{
+	margin:0;
+}
+
+

@@ -9,9 +9,9 @@ class HighlightTwo extends Component {
 
   render(){
     return(
-      <div className={this.props.active ? "Highlight Two Active" : "Highlight Two" } onClick={this.props.slideTwo}>
+      <div className={this.props.active ? "Highlight Two Active" : "Highlight Two" } onMouseEnter={this.props.slideTwo}>
         <div className="Highlight--details">
-          <span className="Highlight--category">Barry Flack &middot; <Link to="#">HR Technology</Link></span>
+          <span className="Highlight--category">Barry Flack <div className="DOT">&middot;</div> <Link to="#">HR Technology</Link></span>
           <h5>Control, Flexibility and Balance: Where We’ll Work soon</h5>
         </div>
       </div>

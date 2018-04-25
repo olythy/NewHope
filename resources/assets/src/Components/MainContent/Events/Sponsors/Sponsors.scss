@@ -1,0 +1,32 @@
+.Sponsors--wrp{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: space-between;
+    margin-bottom:2em;
+	@media #{$medium-40} {
+		grid-template-columns: repeat(auto-fill, 31.75%);
+	}
+	@media #{$larg} {
+		margin-bottom:3em;
+	}
+	@media #{$extra-larg} {
+		grid-template-columns: repeat(auto-fill, 304px);
+		grid-gap: 0 1em;
+	}
+}
+
+.TextBox{
+	margin:3em 0;
+	@media #{$larg} {
+		margin:4.5em 0;
+	}
+	.TextBox--Text{
+		p{
+			margin-bottom:1em;
+			max-width:650px;
+			@media #{$larg} {
+				margin-bottom:1.5em;
+			}
+		}
+	}
+}

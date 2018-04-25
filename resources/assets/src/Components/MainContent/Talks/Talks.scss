@@ -1,5 +1,4 @@
 .Talks--wrp{
-	margin:3em 0;
 	.seeAll a{
 		color:$red;
 		&:after{
@@ -9,9 +8,16 @@
 }
 
 .TalkCard--wrp{
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
+	.drag{
+		justify-content:space-between;
+		> div{
+			flex-basis:31.75%;
+			padding:.1em;
+			&:last-child .Talk-card{
+				margin-right:0;
+			}
+		}
+	}
 }
 
 .Talks--title{

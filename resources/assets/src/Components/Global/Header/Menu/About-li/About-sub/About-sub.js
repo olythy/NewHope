@@ -8,41 +8,58 @@ const AboutSub = () => (
 	<div className="App-header--sub col3">
 		<div className="App-header--submenu col3">	
 			<div className="App-header--submenu---wrp">
-				<div className="App-header--subtitle">
+				<div className="Headline">
+				<div className="Headline--title">
 					<h3>Unleash</h3>
 				</div>
+				<div className="Stripe"></div>
+			</div>
 				<ul className="App-header--subul">
-					<li className="App-header--subli"><Link to="#">Who we are</Link></li>
+					<li className="App-header--subli"><Link to="/aboutus">Get to know us</Link></li>
 					<li className="App-header--subli"><Link to="#">Press</Link></li>
-					<li className="App-header--subli"><Link to="#">Terms &amp; Conditions</Link></li>
-					<li className="App-header--subli"><Link to="#">Privacy Policy</Link></li>
+					<li className="App-header--subli"><Link to="/terms">Terms &amp; Conditions</Link></li>
+					<li className="App-header--subli"><Link to="/terms">Privacy Policy</Link></li>
 				</ul>
 			</div>
 			<div className="App-header--submenu---wrp">
-				<div className="App-header--subtitle">
+				<div className="Headline">
+				<div className="Headline--title">
 					<h3>Careers</h3>
 				</div>
+				<div className="Stripe"></div>
+			</div>
 				<ul className="App-header--subul">
-					<li className="App-header--subli"><Link to="#">Sales executive</Link></li>
-					<li className="App-header--subli"><Link to="#">Operations manager</Link></li>
-					<li className="App-header--subli"><Link to="#">Volunteer program</Link></li>
-					<li className="App-header--subli all"><Link to="#">See more</Link></li>
+					<li className="App-header--subli"><Link to="/careers">Sales executive</Link></li>
+					<li className="App-header--subli"><Link to="/careers">Operations manager</Link></li>
+					<li className="App-header--subli"><Link to="/careers">Volunteer program</Link></li>
+					<li className="App-header--subli all"><Link to="/careers">See more</Link></li>
 				</ul>
 			</div>
 			<div className="App-header--social">
-				<Social />
+				<Social
+					srcFacebook="/storage/Gfx/Global/Footer/facebookB.svg"
+					srcTwitter="/storage/Gfx/Global/Footer/twitterB.svg"
+					srcLinkedin="/storage/Gfx/Global/Footer/linkedinB.svg"
+					srcYoutube="/storage/Gfx/Global/Footer/youtubeB.svg"
+				/>
 			</div>
 			<div className="App-header--newsletter">
 				<NewsLetter />
 			</div>
 		</div>
 		<div className="App-header--highlight">
-			<div className="App-header--subtitle">
-				<h3>Corporate posts</h3>
+			<div className="Headline">
+				<div className="Headline--title">
+					<h3>UNLEASH posts</h3>
+				</div>
+				<div className="Stripe"></div>
+				<div className="seeAll">
+	                <Link to="/news">See all</Link>
+	            </div>
 			</div>
 			<ul className="App-header--subul">
-				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/News/news-previewHL.png" /></Link></li>
-				<li className="App-header--subli"><Link to="#"><NewsCard src="/storage/Gfx/News/news-previewHL2.png" /></Link></li>
+				<li className="App-header--subli"><NewsCard src="/storage/Gfx/News/news-previewHL.png" /></li>
+				<li className="App-header--subli"><NewsCard src="/storage/Gfx/News/news-previewHL2.png" /></li>
 			</ul>
 		</div>
 	</div>

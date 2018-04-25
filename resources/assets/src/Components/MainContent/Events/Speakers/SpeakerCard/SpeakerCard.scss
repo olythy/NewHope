@@ -1,40 +1,85 @@
 .SpeakerCard{
-	flex-basis:48%;
 	cursor:pointer;
 	position:relative;
-	margin:.75em 0;
+	margin-bottom:3em;
 
 	&:hover{
-		.SpeakerCard--details{
-			color:$black;
-			background:repeating-linear-gradient(-45deg, $white, $white 1px, rgba($white,0.6) 1px, rgba($white,0.6) 2px);
+		.SpeakerCard--fullDetails{
+			opacity:1;
+			visibility:visible;
+			z-index:3;
 		}
 	}
 
-	@media #{$medium-40} {
-		flex-basis:32%;
-	}
 	@media #{$larg} {
-		flex-basis:23%;
+		margin-bottom:3.5em;
 	}
 
 	.SpeakerCard--details{
 		position: absolute;
-	    bottom: 0;
+	    bottom: -35px;
 	    z-index:2;
 	    width: 100%;
 	    padding:1em;
 	    color:$white;
-	    background:repeating-linear-gradient(-45deg, $black, $black 1px, rgba($black,0.8) 1px, rgba($black,0.8) 2px);
+	    background: repeating-linear-gradient(-45deg, rgba($black, 0.8), rgba($black, 0.8) 2px, rgba($black, 0.7) 2px, rgba($black, 0.7) 4px), url('/storage/Gfx/Events/Speakers/speakerCard-mask.png');
 
 	    h5{
 	    	font-family:$anton;
 	    	text-transform: uppercase;
     		letter-spacing: 1px;
+    		font-weight:normal;
 	    }
 	    span{
 	    	margin-top:.5em;
 	    }
+	}
+
+	.SpeakerCard--fullDetails{
+		background:repeating-linear-gradient(-45deg, rgba($black, 0.8), rgba($black, 0.8) 2px, rgba($black, 0.7) 2px, rgba($black, 0.7) 4px), url("/storage/Gfx/Events/Speakers/speakerCard-fullmask.png");
+		position:absolute;
+		display:flex;
+		flex-direction:column;
+		top:0;
+		left:0;
+		opacity:0;
+		padding:1em;
+		height:110%;
+		visibility:hidden;
+		h2{
+			margin-top:.5em;
+			color:$white;
+		}
+		span{
+			color:$white;
+			margin:.5em 0;
+		}
+		.SpeakerCard--fullDetails--wrp{
+			display:flex;
+			flex-direction:column;
+			height:100%;
+			margin-bottom:.5em;
+			color:$white;
+			span.SpeakerCard--fullDetails---text{
+				color:$grey4;
+				margin-bottom:2em;
+				height:50px;
+				overflow:hidden;
+				@media #{$medium} {
+					height:auto;
+				}
+				@media #{$larg} {
+					height:80px;
+				}
+				@media #{$larg-60} {
+					height:auto;
+				}
+			}
+			button{
+				margin-top:auto;
+				width:110px;
+			}
+		}
 	}
 
 	.SpeakerCard--img{
@@ -47,8 +92,10 @@
 		}
 	}
 
-	&.BecomeSpeaker{
+	&.BecomeCard{
 		padding:1em;
+		padding-top:1.5em;
+		margin-bottom:.75em;
 		border:1px solid $black;
 		position:relative;
 		display:flex;
@@ -61,6 +108,10 @@
 				display:none;
 			}
 
+		}
+
+		@media #{$larg} {
+			margin-bottom:1.25em;
 		}
 
 		@media #{$extra-larg} {
@@ -85,8 +136,10 @@
 
 		h2{
 			font-size:1.5em;
+			line-height:28px;
 			@media #{$medium-40} {
 				font-size:2em;
+				line-height:40px;
 			}
 		}
 
@@ -111,23 +164,28 @@
 	margin-bottom:1.5em;
 	@media #{$larg} {
 		flex-direction:row;
+		justify-content:space-between;
 	}
 
 	.SpeakerCardHighLight--img{
 		position:relative;
+		@media #{$medium} {
+			width:48%;
+		}
 		img{
 			width:100%;
 		}
 		@media #{$larg} {
 			@include img-crop--parent(auto);
 			flex-basis:50%;
+			width:auto;
 			img{
 				@include img-crop;
 				width:auto;
 			}
 		}
 		@media #{$extra-larg} {
-			flex-basis:30%;
+			flex-basis:31.75%;
 		}
 	}
 
@@ -135,9 +193,12 @@
 		display:none;
 		flex-direction:column;
 		flex-basis:65%;
-		padding-left:1.5em;
 		@media #{$larg} {
 			display:flex;
+			padding-left:1.5em;
+		}
+		@media #{$extra-larg} {
+			padding-left:0;
 		}
 	}
 
@@ -148,6 +209,10 @@
 
 		@media #{$extra-larg} {
 			flex-direction:row;
+		}
+
+		h1{
+			font-size:72px;
 		}
 
 		.SpeakerCardHighLight--social{
@@ -180,9 +245,18 @@
 		}
 	}
 
+	.SpeakerCardHighLight--jobTitle{
+		display:flex;
+		flex-wrap:wrap;
+		margin:1em 0;
+		h5{
+			font-weight:normal;
+		}
+	}
+
 	.SpeakerCardHighLight--categ-date-place{
 		display:flex;
-		margin:1.5em 0;
+		margin:1em 0;
 		> div {
 			margin-right:2em;
 			display:flex;
@@ -190,12 +264,11 @@
 			
 			span{
 				margin:auto;
-				font-weight:bold;
 			}
 
 			&.categ{
 				padding:.25em .5em;
-				background:$red;
+				background:$light-blue;
 				color:$white;
 			}
 			&.date{
@@ -218,8 +291,11 @@
 	}
 
 	.SpeakerCardHighLight--speakContent{
+		@media #{$extra-larg} {
+			max-width:85%;
+		}
 		h4{
-			margin-bottom:1em;
+			margin-bottom:.5em;
 		}
 	}
 
@@ -228,7 +304,12 @@
 		position:relative;
 		color:$grey2;
 		padding-top:1em;
-		margin-top:1em;
+		margin-top:1.5em;
+
+		@media #{$extra-larg} {
+			max-width:85%;
+		}
+
 		&:before{
 			content:'';
 			width:80px;
@@ -239,22 +320,75 @@
 		}
 	}
 
-	.SpeakerCardHighLight--shortIno{
-		color:$white;
+	.SpeakerCardHighLight--shortInfo{
+		color: $white;
+    	position: absolute;
+    	top: 0;
+    	left: 0;
+    	display: flex;
+    	flex-direction: column;
+    	height: 100%;
+    	width: 100%;
+    	padding: 1em;
 		@media #{$larg} {
 			display:none;
 		}
 
-		.SpeakerCardHighLight--categ-date-place{
-			position:absolute;
-			top:30px;
-			left:30px;
+		.ShortInfo--categ-date-place{
+			.categ span{
+				background:$light-blue;
+				padding:.25em .5em;
+				display:inline-flex;
+			}
+			.date{
+				position:relative;
+				margin:.5em 0;
+				margin-left:1.25em;
+				&:before{
+					content:url('/storage/Gfx/Events/calendarW.svg');
+					position:absolute;
+					left: -20px;
+    				top: 2px;
+    			}
+			}
+			.place{
+				position:relative;
+				margin-left:1.25em;
+				&:before{
+					content:url('/storage/Gfx/Events/pinW.svg');
+					position:absolute;
+					left: -20px;
+    				top: 2px;
+    			}
+			}
 		}
 
 		.SpeakerCardHighLight--shortName{
-			position:absolute;
-			bottom:30px;
-			left:30px;
+			margin-top:auto;
+		}
+	}
+}
+
+
+//AMERICA
+
+.America{
+	.SpeakerCardHighLight--shortInfo .ShortInfo--categ-date-place{
+		.categ span{
+			background:$red;
+		}
+	}
+	.SpeakerCardHighLight--categ-date-place{
+		> div {
+			&.categ{
+				background:$red;
+			}
+			&.date:before{
+				content:url('/storage/Gfx/Events/Speakers/speaker-calendarR.svg');
+			}
+			&.place:before{
+				content:url('/storage/Gfx/Events/Speakers/speaker-pinR.svg');
+			}
 		}
 	}
 }

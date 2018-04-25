@@ -1,10 +1,60 @@
 .Speakers--wrp{
 	margin:3em 0;
+	@media #{$larg} {
+		margin:4.5em 0;
+	}
 }
 
 .SpeakerCards--wrp{
-	display:flex;
-	flex-wrap:wrap;
-	justify-content:space-between;
-	margin-bottom:2em;
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 48%);
+    justify-content: space-between;
+    margin-bottom:1.5em;
+	@media #{$medium-40} {
+		grid-template-columns: repeat(auto-fill, 31.75%);
+	}
+	@media #{$larg} {
+		grid-template-columns: repeat(auto-fill, 23%);
+		grid-gap: 0 1em;
+	}
+}
+
+.Speakers--mrg{
+	.SpeakerCardHighLight{
+		margin-bottom:3em;
+		@media #{$larg} {
+			margin-bottom:4.5em;
+		}
+	}
+}
+
+
+//SPEAKER INFO
+
+.SpeakerInfo{
+	margin:3em 0;
+
+	.Agenda--wrp{
+		margin:0;
+		.AgendaSessionCard{
+			min-width:auto;
+			margin:0;
+		}
+	}
+
+	.SpeakerCardHighLight--shortIno{
+		display:none;
+	}
+
+	.SpeakerCardHighLight .SpeakerCardHighLight--details{
+		display:flex;
+		margin-top:2em;
+		@media #{$larg} {
+			margin-top:0;
+		}		
+	}
+}
+
+.SpeakerInfo--wrp{
+	margin-bottom:8em;
 }

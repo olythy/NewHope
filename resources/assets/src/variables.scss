@@ -40,20 +40,34 @@ $anton :'Anton';
 $transition-fast: .3s;
 $transition-extrafast: .15s;
 
-
 //MEDIA QUERIES
 
+$small: "screen and (min-width : 25em)";
 $medium: "screen and (min-width : 30em)";
 $medium-40: "screen and (min-width : 40em)";
 $larg: "screen and (min-width : 48em)";
 $larg-60: "screen and (min-width : 60em)";
 $extra-larg: "screen and (min-width : 75em)";
 
+$MAXmedium: "screen and (max-width : 30em)";
+$MAXmedium-40: "screen and (max-width : 40em)";
+$MAXlarg: "screen and (max-width : 48em)";
+
+$medium-larg: "screen and (min-width: 30em) and (max-width:48em)";
+$medium40-larg: "screen and (min-width: 40em) and (max-width:48em)";
+$medium40-larg60: "screen and (min-width: 40em) and (max-width:60em)";
+$medium40-extralarg: "screen and (min-width: 40em) and (max-width:75em)";
+$larg-larg60: "screen and (min-width: 48em) and (max-width:60em)";
+
 //IMG BG
 
 @mixin bg-cover-pos	{
  background-size: cover;
  background-position: center;
+}
+
+@mixin box-shadow($color){
+    box-shadow:0px 8px 8px $color;
 }
 
 @mixin bg-contain-pos-norep	{
@@ -91,7 +105,40 @@ $extra-larg: "screen and (min-width : 75em)";
     min-width: 100%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    max-width: none;
+    //max-width: none;
+}
+
+@mixin before-line($bg){
+    content: '';
+    width: 60px;
+    height: 70%;
+    background: repeating-linear-gradient(-45deg, $grey9, $white 3px, transparent 3px, transparent 6px), $bg;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    right: 0;
+    top: 0;
+    @media #{$larg} {
+        height:100%;
+    }
+    @media #{$extra-larg} {
+        left:0;
+        right:auto;
+    }
+}
+
+@mixin before-line-v2{
+    content: '';
+    width: 60px;
+    height: 100%;
+    background: repeating-linear-gradient(-45deg, $grey2, $grey2 2px, transparent 2px, transparent 4px);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 @mixin after-BGline{
@@ -110,13 +157,12 @@ $extra-larg: "screen and (min-width : 75em)";
 //SIZES
 
 $NewsCardHeight: 120px;
-$NewsCardHighLightedIMG : 370px;
 
 $SpeakerCardHeight: 315px;
 $SpeakerCardHighLightedIMG : 430px;
 
 $IntroBoxes-BigBoxIMG : 270px;
 $IntroBoxes-SmallBoxMobileIMG : 160px;
-$IntroBoxes-SmallBoxDesktopIMG : 220px;
+$IntroBoxes-SmallBoxDesktopIMG : 240px;
 
-$HeadlineSponsorsBoxWidth : 390px;
+$HeadlineSponsorsBoxWidth : 386px;

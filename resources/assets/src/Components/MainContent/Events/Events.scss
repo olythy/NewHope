@@ -2,9 +2,16 @@
 	position:relative;
 	background:$dark-blue;
 	padding:3em 0;
+	margin-bottom:3em;
+	margin-top:2em;
+	@media #{$larg} {
+		margin-top:3em;
+		margin-bottom:4.5em;
+		padding:4.5em 0;
+	}
 	h2{
 		color:$white;
-		margin-bottom:1em;
+		margin-bottom:.75em;
 	}
 
 	&:after{
@@ -15,5 +22,32 @@
 		position:absolute;
 		right:0;
 		top:0;
+	}
+}
+
+.Talks-and-Twitter--wrp{
+	background:url("/storage/Gfx/Twitter/twitter-bgD.jpg");
+	@include bg-cover-pos;
+	padding:3em 0;
+	position:relative;
+	@media #{$larg} {
+		padding:4.5em 0;
+	}
+
+	&:after{
+		content: '';
+	    width: 100%;
+	    height: 150px;
+	    background: url(/storage/Gfx/bg-line.png);
+	    background-size: cover;
+	    background-position: center;
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	}
+	.Headline--title{
+		h2{
+			color:$white;
+		}
 	}
 }

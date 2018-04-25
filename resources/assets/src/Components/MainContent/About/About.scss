@@ -5,3 +5,159 @@
 	padding:1em;
 }
 
+.ContactPerson{
+	background:$event-teal;
+	padding:3em 0;
+	position:relative;
+	@media #{$larg} {
+		padding:2em 0;
+	}
+	&:before{
+		@media #{$extra-larg} {
+			@include before-line-v2;
+		}
+	}
+}
+
+.ContactPerson--wrp{
+	display:flex;
+	justify-content:space-between;
+	flex-direction:column;
+	@media #{$medium-40} {
+		flex-direction:row;
+	}
+	.ContactPerson--title{
+		margin-bottom:1.5em;
+		flex-basis:100%;
+		@media #{$medium-40} {
+			flex-basis:56%;
+			margin:auto 0;
+		}
+		h2{
+			color:$white;
+		}
+	}
+	.ContactPerson--Card{
+		background: $white;
+    	padding: 1em;
+    	width: 100%;
+    	@media #{$medium-40} {
+			width:386px;
+			margin-left:1em;
+		}
+	}
+	.ContactPerson--Card---profile{
+		display:flex;
+		margin-bottom:1em;
+		.ContactPerson--Card---img{
+			width:72px;
+			height:72px;
+		}
+		.ContactPerson--Card---person{
+			margin:auto 1em;
+		}
+	}
+	.ContactPerson--Card---social{
+		padding-top:1em;
+		border-top:1px solid $grey4;
+		display:flex;
+		justify-content:space-between;
+
+		a{
+			margin:auto 0;
+			color:$light-blue;
+			text-decoration:underline;
+		}
+
+		img{
+			padding: .5em;
+    		border: 1px solid $grey5;
+    		border-radius: 25px;
+    		margin-left:1em;
+		}
+	}
+}
+
+//CAREERCARD
+
+.Careers--position{
+	margin-top:3em;
+	margin-bottom:2em;
+	@media #{$larg} {
+		margin-top:4.5em;
+		margin-bottom:3em;
+	}
+}
+
+.Careers--position--wrp{
+	display: grid;
+    grid-template-columns: repeat(auto-fill, 100%);
+    justify-content: space-between;
+	@media #{$medium-40} {
+		grid-template-columns: repeat(auto-fill, 48%);
+	}
+	@media #{$larg} {
+		grid-template-columns: repeat(auto-fill, 31.75%);
+	}
+}
+
+.CareerCard{
+	display:flex;
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
+	margin-bottom:1em;
+	&:hover{
+		box-shadow: 0px 4px 16px rgba($black, 0.1);
+    	cursor:pointer;
+    	transition: all $transition-fast;
+	}
+	@media #{$larg-60} {
+		margin-bottom:1.5em;
+	}
+
+	.CareerCard--img{
+		display: flex;
+		border-right:1px solid $grey4;
+	    padding: 0 .5em;
+	    width:110px;
+	    @media #{$medium-40} {
+			padding: 0 1em;
+		}
+	    img{
+	    	margin:auto;
+	    }
+	}
+
+	.CareerCard--details---wrp{
+		h5{
+			margin-bottom:.25em;
+		}
+		span{
+			color:$grey1;
+		}
+	}
+
+	.CareerCard--details{
+		flex-basis:75%;
+		margin:auto;
+		padding:1em;
+	}
+}
+
+
+//AMERICA
+
+.America{
+	.ContactPerson{
+		background:$red;
+	}
+}
+
+
+//STARTUPHUB
+
+.StartupHUB{
+	.ContactPerson{
+		background:$orange;
+	}
+}
+

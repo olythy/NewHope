@@ -1,0 +1,87 @@
+HEADER.JS 
+
+<div className="App-header--search-_-login">
+	<Search />
+	<Login />
+</div>
+
+////////////////////////////////////////////////////////////
+
+MENU.JS
+
+<TalksLi {...this.state} toggleMenu={this.toggleMenu}/>
+
+<div className="Event">
+			<div className="Headline">
+				<div className="Headline--title">
+					<h3>Newsletter</h3>
+				</div>
+				<div className="Stripe"></div>
+			</div>
+			<NewsLetterCard />
+		</div>
+
+
+		<div className="TextBox">
+			<div className="TextBox--Text">
+				<div className="Headline">
+					<div className="Headline--title">
+						<h2>Our team</h2>
+					</div>
+					<div className="Stripe"></div>
+				</div>
+				<p>Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the echnologies and ways to apply them that will have the greatest potential impact and value. Join the movers and shakers!</p>
+			</div>
+		</div>
+		<div className="SpeakerCards--wrp">
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+			<SpeakerCard />
+		</div>
+
+
+
+popular ki newsbol
+
+popup listak pardohoz
+form thank you
+
+video category kuka date/views ?
+
+
+/london/mobilapp script berakni
+mobileapp.blade
+
+pollnak utananezni
+
+
+NEWS
+minute read kuka
+all news kuka
+
+
+ARTICLE
+counter kuka
+like kuka
+
+slack share ki
+mail share ki
+sponsor logo tagek ki
+
+related ki
+
+
+AMERICA 
+startup jury ki
+
+hotels in area kuka
+ticket sign up kuka
+
+investor kuka global startup
+
+startup news

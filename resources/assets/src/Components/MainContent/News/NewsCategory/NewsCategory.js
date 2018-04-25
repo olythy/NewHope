@@ -9,8 +9,9 @@ const NewsCategory = props => (
             <div className="News--title">
                 <h2>{props.name}</h2>    
             </div>
+            <div className="Stripe"></div>
             <div className="seeAll">
-                <Link to="news">See all</Link>
+                <Link to="/news/categpage">See all</Link>
             </div> 
         </div>        
         <div className="NewsCard--wrp">

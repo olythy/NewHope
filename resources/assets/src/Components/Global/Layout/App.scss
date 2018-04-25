@@ -46,8 +46,11 @@
 	//FILLED
 	%btn{
 		background:none;
+		min-width:110px;
 		border:1px solid transparent;
-		padding:.5em;
+		padding:.5em 1em;
+		height:40px;
+		font-size:14px;
 		position:relative;
 		text-transform:uppercase;
 		font-weight:bold;
@@ -83,13 +86,10 @@
 
 
 	%btnspn {
-	  padding: .75em .5em .5em .5em;
-	  @media #{$medium} {
-	    padding:.5em;
-	  }
-	  @media #{$larg} {
-	   	min-width:110px;
-	  }
+	  padding: .75em .5em .75em .5em;
+	  min-width:110px;
+	  height:40px;
+	  font-size:14px;
 	  color:transparent;
 	  background:none;
 	  cursor:pointer;
@@ -99,12 +99,11 @@
 	  	margin:0!important;
 	  }
 	  text-transform: uppercase;
-	  font-family: 'Anton';
-	  letter-spacing:1px;
+	  font-family: 'Lato';
 	  font-weight: bold;
 	  text-decoration: none;
-	  border-left: solid 2px transparent;
-	  border-right: solid 2px transparent;
+	  border-left: solid 1px transparent;
+	  border-right: solid 1px transparent;
 	  position: relative;
 	  display: inline-block;
 	  transform: perspective(1px) translateZ(0);
@@ -159,7 +158,7 @@
 	      &:before {
 	        content: '';
 	        width:100%;
-	        height: 2px;
+	        height: 1px;
 	        display:block;
 	        background: transparent;
 	        transform: scaleX(0);
@@ -172,7 +171,7 @@
 	      content: '';
 	      display: block;
 	      background: transparent;
-	      height: 2px;
+	      height: 1px;
 	    }
 	  }
 	  .border-top {
@@ -220,6 +219,10 @@
 		}
 		&:hover {
 			color: $white;
+			button{
+				color:$white;
+				cursor:pointer;
+			}
 		}
 		.border-top,
 	    .border-bottom {
@@ -240,16 +243,16 @@
 		color:$white;
 		border-color:$white;
 		&:before{
-			background:$light-blue;
+			background:$black;
 		}
 		&:hover {
 			color: $white;
-			border-color:$light-blue;
+			border-color:$black;
 			.border-top,
 	    	.border-bottom {
 	    		&:after,
 	    		&:before {
-	      			background: $light-blue;
+	      			background: $black;
 	  			}
 	    	}
 		}
@@ -257,7 +260,7 @@
 	    .border-bottom {
 	    	.transparent {
 	    		&:before {
-	    			background: $light-blue;
+	    			background: $black;
 	    		}
 	  		}
 	  		&:after,
@@ -265,4 +268,69 @@
 	      		background: $white;
 	  		}
 	    }
+	}
+
+	.Headline .btnspn-b{
+		font-family:'Anton';
+		letter-spacing:1px;
+		min-width:auto;
+		height:30px;
+		padding:.6em;
+		margin:auto;
+		@media #{$medium} {
+	    	padding:.6em;
+	  	}
+	}
+
+
+
+	//404
+
+	.NoTFound{
+		margin:3em 0;
+	}
+
+	//TERMS
+
+	.Terms--wrp{
+		margin:3em 0;
+		@media #{$larg} {
+			margin:4.5em 0;
+		}
+
+		h1{
+			margin-bottom:.375em;
+			@media #{$larg} {
+				margin-bottom:.75em;
+			}
+		}
+		.Terms--introText{
+			margin-bottom:3em
+		}
+		h2{
+			margin-bottom:.75em;
+		}
+
+		h3{
+			font-family:'Lato';
+			font-weight:bold;
+			text-transform:none;
+		}
+		h4{
+			margin-bottom:.75em;
+		}
+
+
+		p{
+			font-size:1.25em;
+			line-height:32px;
+			margin-bottom:2em;
+		}
+
+
+
+
+
+
+
 	}

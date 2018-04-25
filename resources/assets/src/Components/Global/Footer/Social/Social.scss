@@ -12,9 +12,6 @@
 			cursor:pointer;
 			transition:all $transition-fast;
 		}
-		@media #{$larg} {
-			margin-right:1em;
-		}
 		&.Social--facebook:hover{
 			background:$facebook;
 		}
@@ -37,6 +34,8 @@
 	margin-bottom:1em;	
 	img{
 		border:1px solid $grey3;
-		background:rgba($black,0.15);
+		&:hover{
+			background:rgba($grey1,0.05);
+		}
 	}
 }

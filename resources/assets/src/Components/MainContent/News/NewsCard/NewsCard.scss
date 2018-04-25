@@ -1,22 +1,28 @@
 .News-card{
 	display:flex;
 	justify-content:space-between;
-	border: 1px solid $grey4;
+	height:136px;
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
 	background:$white;
 	flex-basis: 100%;
 	z-index:2;
+	margin:auto 0;
     margin-bottom: 1em;
     &:hover{
-    	background:rgba($purple,0.02);
-    	cursor:pointer;
-    	h5{
-    		color:$purple;
-    	}
+    	box-shadow: 0px 4px 16px rgba($black, 0.1);
     	transition: all $transition-fast;
     }
     @media #{$larg} {
-    	flex-basis:48%;
+    	flex-basis:48.8%;
+    	height:116px;
     }
+}
+
+.News--wrp.dflt .News-card{
+	@media #{$larg} {
+		margin-bottom:1.5em;
+		height:116px;
+	}
 }
 
 .News-card--details{
@@ -33,6 +39,10 @@
     		margin-bottom:0;
     	}
 	}
+
+	.News-card--details---spns{
+		margin-top:auto;
+	}
 }
 
 .News-card--preview{
@@ -47,7 +57,7 @@
 .News-card--author-category{
 	margin-top: auto;
     margin-bottom: .5em;
-    color:$purple;
+    color:$grey1;
 	a{color:$purple}
 	@media #{$extra-larg} {
     	margin-top: 1em;
@@ -64,6 +74,7 @@
 	.News-card{
 		flex-direction:column-reverse;
 		margin:0;
+		height:auto;
 	}
 	.News-card--details{
 		width:100%;
@@ -82,7 +93,7 @@
 
 .News-card--HighLight{
 	position:relative;
-	flex-basis:48%;
+	flex-basis:40.25%;
 	margin-bottom: 1em;
 	&:before{
 		content:'';
@@ -94,50 +105,54 @@
 	    z-index: 1;
 	}
 
+	.News-card--Tag{
+		position:absolute;
+		z-index:2;
+		top:1em;
+		left:1em;
+		background:$purple;
+		padding:.25em .5em;
+		span{
+			color:$white;
+		}
+	}
+
 	.News-card--details{
 		position:absolute;
 		z-index:2;
 		width:100%;
-		bottom:1em;
+		bottom:0;
 		color:$white;
-		span{color:$white}
+		a{color:$white}
+		span{
+			color:$white;
+			a{
+				color:$purple;
+			}
+		}
 	}
 
+
+}
+
+.NewsCateg--wrp .Categ{
 	.News-card--img{
-		@include img-crop--parent($NewsCardHighLightedIMG);
+		@include img-crop--parent(290px);
 		img{
 			@include img-crop;
 		}
 	}
 }
 
-//SAVED 
+.Categ{
+	.News-card--img{
+		@include img-crop--parent(290px);
+		@media #{$larg} {
+			height:380px;
+		}
+		img{
+			@include img-crop;
+		}
 
-.Pinned{
-	&.Saved{
-		.News-card{
-			&:hover{
-	    		background:rgba($red,0.02);
-	    		h5{
-	    			color:$red;
-	    		}
-	    	}
-	    	.News-card--author-category{
-	    		color:$red;
-	    	}
-		}
-	}
-	&.Recommended{
-		.News-card{
-			&:hover{
-	    		background:rgba($light-blue,0.02);
-	    		h5{
-	    			color:$light-blue;
-	    		}
-	    	}
-	    	.News-card--author-category{
-	    		color:$light-blue;
-	    	}
-		}
 	}
 }

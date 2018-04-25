@@ -9,7 +9,7 @@ class HighlightThree extends Component {
 
   render(){
     return(
-      <div className={this.props.active ? "Highlight Three talk Active" : "Highlight Three talk" } onClick={this.props.slideThree}>
+      <div className={this.props.active ? "Highlight Three talk Active" : "Highlight Three talk" } onMouseEnter={this.props.slideThree}>
         <div className="Highlight--details">
           <span className="Highlight--category">Culture</span>
           <h5>How Can Your Company Work to Eliminate the Gender Pension Gap..</h5>

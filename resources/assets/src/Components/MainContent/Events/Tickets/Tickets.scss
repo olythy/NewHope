@@ -1,0 +1,450 @@
+.Tickets--wrp{
+	position:relative;
+	padding:3em 0;
+	
+	@media #{$larg} {
+		padding:4.5em 0;
+	}
+
+	@media #{$extra-larg} {
+    	&:before{
+			content: '';
+		    width: 60px;
+		    height: 100%;
+		    background: repeating-linear-gradient(-45deg, rgba($black, 0.2), rgba($black, 0.2) 2px, transparent 2px, transparent 4px);
+		    position: absolute;
+		    left: 0;
+		    top: 0;
+		}
+    }
+
+    &.Single{
+    	background:$light-blue;
+    	.TicketCard--category---BG{
+    		background:$light-blue;
+    	}
+    }
+
+    &.Group{
+    	background:$dark-blue;
+    	.TicketCard{
+    		&:before,&:after{
+    			background:$dark-blue;
+    		}
+    		.TicketCard--category---BG{
+    			background:$dark-blue;
+    		}
+    	}
+    }
+    &.Investors{
+    	background:$purple;
+    	.TicketCard{
+    		&:before,&:after{
+    			background:$purple;
+    		}
+    		.TicketCard--category---BG{
+    			background:$purple;
+    		}
+    	}
+    	.Stripe{
+    		width:370px;
+    		margin-left:0;
+    	}
+    }
+    &.Startup{
+    	background:$orange;
+    	.TicketCard{
+    		&:before,&:after{
+    			background:$orange;
+    		}
+    		.TicketCard--category---BG{
+    			background:$orange;
+    		}
+    	}
+    	.Stripe{
+    		width:395px;
+    		margin-left:0;
+    	}
+    	.Headline h2{
+			color:$black;
+		}
+    }
+}
+
+.TicketCard{
+	width:280px;
+	height:415px;
+	background:$white;
+	padding: 1em;
+	margin-right:1.5em;
+	position:relative;
+	display:flex;
+	cursor:pointer;
+	flex-direction:column;
+
+	@media #{$medium} {
+		width:304px;
+	}
+
+	&:hover{
+		transition:all $transition-fast;
+		background:rgba($white,.9)
+	}
+
+	&:before,&:after{
+		content: '';
+	    width: 15px;
+	    height: 30px;
+	    background: #4AD9D9;
+	    position: absolute;
+	    top: 50%;
+	    transform: translate(0, -50%);
+	    z-index:2;
+	}
+
+	&:before{
+		left:0;
+		border-bottom-right-radius: 30px;
+  		border-top-right-radius: 30px;
+	}
+	&:after{
+		right:0;
+		border-bottom-left-radius: 30px;
+  		border-top-left-radius: 30px;
+	}
+}
+
+.TicketCard--category{
+	display:flex;
+	color:$red;
+	span{
+		margin:auto 0;
+	}
+
+	.TicketCard--category---BG{
+		padding:.25em .5em;
+		background:$red;
+		color:$white;
+		margin-right:1em;
+	}
+}
+
+.TicketCard--name{
+	border-top:1px solid $grey1;
+	border-bottom:1px solid $grey1;
+	font-family:'Anton';
+	padding:.5em 0;
+	margin:1em 0;
+
+	h4{
+		text-transform:uppercase;
+		font-weight:normal;
+	}
+}
+
+.TicketCardPrice--wrp{
+	margin-bottom:2.5em;
+	span{
+		color:$grey3;
+		font-weight:normal;
+		&:after{
+			content:'';
+			width:100%;
+			height:1px;
+			border-bottom:1px solid $grey4;
+			position:absolute;
+			top:50%;
+			left:0;
+			transform: translate(0, -50%);
+		}
+	}
+}
+
+.TicketCard--price{
+	display:flex;
+	margin-bottom:.5em;
+	h1{
+		font-family:'Lato';
+		font-weight:900;
+		line-height:52px;
+	}
+	h2{
+		margin-top: auto;
+    	line-height:45px;
+    	font-family:'Lato';
+   		font-weight: 900;
+   		@media #{$larg} {
+			line-height:35px;
+		}
+	}
+}
+
+.TicketCardDetails--wrp{
+	.TicketCard--access{
+		text-transform:uppercase;
+		color:$light-blue;
+		margin-bottom:1em;
+	}
+
+	.TicketCard--details{
+		display:flex;
+		flex-wrap:wrap;
+		jusity-content:space-between;
+		span{
+			flex-basis:48%;
+			font-weight:normal;
+		}
+	}
+}
+
+.TicketCard--apply{
+	padding-top:1em;
+	position:relative;
+	margin-top:auto;
+
+	&:after{
+		content:'';
+		width:112%;
+		height:1px;
+		border-bottom:1px solid $grey4;
+		position:absolute;
+		top:0;
+		left:-1em;
+	}
+
+	a{
+		width:100%;
+		button{
+			width:100%;
+		}
+	}
+}
+
+//TICKETS PAGE
+
+.Tickets{
+	.Headline h2{
+		color:$white;
+	}
+	.Stripe{
+		background:repeating-linear-gradient(-45deg, $black, $black 3px, transparent 3px, transparent 6px)
+	}
+
+
+	.MainContent--header.nrml.Tickets{
+		color:$black;
+		height:500px;
+		background: linear-gradient(180deg, rgba($grey5, 0.75) 0%, rgba($grey5, 0) 100%);
+		@media #{$larg} {
+			height:430px;
+		}
+
+		&:after{
+			display:none;
+		}
+		&:before{
+			@include before-line(url("/storage/Gfx/Events/Tickets/ticketsHeaderAMS-line.svg"));
+		}
+	}
+
+	.Event--name span{
+		color:$white;
+	}
+
+	.Event--place-and-date .Event-card-place span:before{
+		content: url(/storage/Gfx/pinGrey.svg);
+	}
+	.Event--place-and-date .Event-card-date span:before{
+		content: url(/storage/Gfx/calendarGrey.svg);
+	}
+
+	.Tickets--wrp{
+		&:before{
+			display:none;
+		}
+	}
+
+	.Ticket-timeLine{
+		display:flex;
+		@media #{$larg} {
+			margin-right:4.5em;
+		}
+
+		.Ticket-timeLine--ticketType{
+			display:flex;
+			flex-direction:column;
+			margin:auto;
+			overflow:hidden;
+
+			h4{
+				color:$grey3;
+				font-family:'Anton';
+				text-transform: uppercase;
+	    		letter-spacing: 1px;
+	    		font-weight: normal;
+	    		padding:.5em 0;
+	    		position:relative;
+	    		width:135px;
+	    		margin:auto;
+	    		text-align:center;
+	    		@media #{$larg} {
+	    			text-align:left;
+	    			padding:0;
+	    			margin-left:1.2em;
+	    		}
+	    		&:before{
+	    			content: '';
+				    width: 12px;
+				    height: 12px;
+				    background: $grey3;
+				    border-radius: 25px;
+				    position: absolute;
+				    left: 50%;
+				    top: -17px;
+				    transform:translate(-50%,-50%);
+				    
+				    @media #{$larg} {
+	    				left: -20px;
+				    	top: 50%;
+	    			}
+	    		}
+			}
+
+			.Ticket-timeLine--first{
+				h4{
+					text-align:left;
+					&:before{
+						left:6px;
+						@media #{$larg} {
+							left:-20px;
+						}
+					}
+				}
+			}
+
+			.Ticket-timeLine--current{
+				flex-direction:column;
+				h2{
+					color:$event-teal;
+					position:relative;
+					width:190px;
+					padding-top:.65em;
+					text-align:center;
+					@media #{$larg} {
+						padding-top:0;
+					}
+					&:before{
+		    			content: '';
+					    width: 24px;
+					    height: 24px;
+					    background: $event-teal;
+					    border-radius: 25px;
+					    position: absolute;
+					    left: 50%;
+					    top: -2px;
+					    transform:translate(-50%,-50%);
+					    @media #{$larg} {
+							left:4px;
+							top:20px;
+						}
+	    			}
+				}
+				span{
+					text-align:center;
+				}
+			}
+
+			.Ticket-timeLine--last{
+				padding-bottom:0;
+				h4{
+					text-align:right;
+					@media #{$larg} {
+						text-align:left;
+					}
+					&:before{
+						right:-6px;
+						left:auto;
+						@media #{$larg} {
+							left:-20px;
+						}
+					}
+				}
+			}
+		}
+
+
+		.drag{
+			@media #{$larg} {
+				position:relative;
+				flex-direction:column;
+				&:before{
+					content: '';
+				    display: block;
+				    width: 4px;
+				    height: 85%;
+				    background: $grey5;
+				    position: absolute;
+				    left: 18px;
+				    top: 0;
+				    margin: 1em 0;
+				}
+			}
+			> div {
+				margin-right:2em;
+				display:flex;
+				margin:1em 0;
+				border-top:4px solid $grey5;
+				@media #{$larg} {
+					margin: 0;
+				    margin-left: 1em;
+				    border-top: none;
+				    padding-bottom: .75em;
+				    width: 95%;
+				}
+			}
+		}
+	}
+}
+
+
+//EVENT PAGE TICKETS SECTION
+
+.EventPage .Tickets--wrp {
+	.Stripe{
+		background:repeating-linear-gradient(-45deg, rgba($black,.2), rgba($black,.2) 3px, transparent 3px, transparent 6px);
+	}
+	.seeAll a{
+		color:$black;
+		&:after{
+			content:url("/storage/Gfx/Global/seeAll-black.svg")
+		}
+	}
+
+	.drag .Layout-width{
+		margin:0 auto;
+	}
+}
+
+//AMERICA COLOR
+
+.America {
+	.Tickets--wrp.Single{
+		background:$red;
+	}
+	.TicketCard:before, .TicketCard:after{
+		background:$red;
+	}
+	.MainContent--header.nrml.Tickets{
+		&:before{
+			@include before-line(url("/storage/Gfx/Events/Tickets/ticketsHeaderUSA-line.svg"));
+		}
+	}
+	.Ticket-timeLine .Ticket-timeLine--ticketType .Ticket-timeLine--current{
+		h2{
+			color:$red;
+			&:before{
+				background: $red;
+			}
+		}
+	}					
+}

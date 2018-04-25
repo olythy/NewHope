@@ -28,6 +28,10 @@
     }
   }
 
+  .ModalCard{
+    display:flex;
+  }
+
 
   //MODAL CONTENT
 
@@ -40,6 +44,9 @@
   	&.signup{
   		background-color:$egg;
   	}
+    &.topic button {
+      width:100%;
+    }
   }
 
   .ModalContent--headline{
@@ -47,21 +54,26 @@
   	justify-content:space-between;
   	position:relative;
 
-  	h2{font-size:40px;}
+  	h2{
+      font-size:40px;
+      padding-right:1em;
+    }
 
   	.ModalContent--close{
-  	    font-size: 40px;
+  	  font-size: 40px;
 	    position: absolute;
 	    right: 0;
-	    top: -2px;
+	    top: 50%;
+      transform: translateY(-50%);
 	    cursor: pointer;
-	    transition-duration: .5s;
+
 	    &:hover{
-	    	transform: rotate(180deg);
-	    	transition-duration: .5s;
+	    	
 	    }
-	}
+	 }
   }
+
+  // MOSTLY LOGIN
 
   .ModalContent--decider{
   	display:flex;
@@ -135,7 +147,7 @@
   }
 
   .ModalContent--from{
-  	input{
+  	.ModalContent--input{
   		width:100%;
   		height:40px;
   		border:1px solid $grey4;
@@ -158,7 +170,41 @@
         color:$light-blue
       }
   	}
+    .ModalContent--submit--checkboxes{
+      > div {
+        display:flex;
+        a{
+          text-decoration:none;
+          color:$event-teal;
+          &:hover{
+            color:$light-blue;
+          }
+        }
+        h6{
+          font-weight:normal;
+        }
+      }
+      input{
+        margin:auto 0;
+        margin-right:.25em;
+      }
+    }
   }
+
+  .ModalContent--introText{
+    margin:1.5em 0;
+    h6{
+      font-weight:normal;
+    }    
+  }
+
+    .ModalContent--submit--text{
+      margin-bottom:1em;
+      h6{
+        color:$grey3;
+        font-weight:normal;
+      }
+    }
 
   .ModalContent--fullname{
   	display:flex;
@@ -167,3 +213,6 @@
   		flex-basis:48%;
   	}
   }
+
+  // JOIN OUR COMMUNITY
+

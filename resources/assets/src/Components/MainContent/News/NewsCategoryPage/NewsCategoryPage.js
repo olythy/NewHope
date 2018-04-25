@@ -12,10 +12,15 @@ class NewsCategoryPage extends Component {
                   <section className="NewsCategoryPage">
                          <CategSlider/>
                         <div className="Layout-width">
-                              <h1>Employee experience</h1>
-                              <NewsLatestPopular>
+                              <div className="NewsCategoryPage--title">
+                                 <h1>Employee experience</h1>
+                              </div>
+                              <NewsLatestPopular showCategs categOne="Latest" categTwo="Popular" stripe >
                                     <NewsCardHighLight />
-                                    <NewsCard />
+                                    <div className="NewsCategoryPage--flexfix">
+                                       <NewsCard />
+                                       <NewsCard />
+                                    </div>
                                     <NewsCard />
                                     <NewsCard />
                                     <NewsCard />

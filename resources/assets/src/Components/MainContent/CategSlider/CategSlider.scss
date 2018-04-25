@@ -4,8 +4,12 @@
 	border-top:1px solid  $grey4;
     border-bottom:1px solid  $grey4;
     margin-bottom:3em;
+    @media #{$larg} {
+        margin-bottom:4.5em;
+    }
     &.sticky{
         position:fixed;
+        box-shadow:4px 4px 12px rgba($black, 0.1);
         width:100%;
         top:0;
         z-index:90;
@@ -13,6 +17,7 @@
     }
     &.stickywM{
         position:fixed;
+        box-shadow:4px 4px 12px rgba($black, 0.1);
         width:100%;
         top:60px;
         z-index:90;
@@ -29,8 +34,6 @@
     visibility: hidden;
 }
 .slick-slider {
-	padding: 0 1em;
-    margin: 0 1.5em;
     box-sizing: border-box;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -77,6 +80,10 @@
     height: 100%;
     width:200px;
     min-height: 1px;
+    a{
+        font-size:.75em;
+        font-weight:bold;
+    }
 }
 [dir=rtl] .slick-slide {
     float: right;
@@ -94,7 +101,7 @@
         display: block;
 	    text-align: center;
 	    width: auto!important;
-	    margin: 0 1em;
+	    margin-right:2.5em;
 	    &:hover a{
 	    	color:$purple;
 	    }
@@ -104,9 +111,11 @@
     height: auto;
     border: 1px solid transparent;
 }
+
 .slick-arrow.slick-hidden {
     display: none;
 }
+
 /*# sourceMappingURL=slick.min.css.map */
 
 
@@ -127,8 +136,10 @@
 .slick-next, .slick-prev {
     font-size: 0;
     line-height: 0;
+    background: linear-gradient(90deg, rgba($white, 0) 0%,  $white 77.35%);
+    position:absolute;
     top: 50%;
-    width: 20px;
+    width: 120px;
     height: 20px;
     transform: translate(0, -50%);
     cursor: pointer;
@@ -139,6 +150,10 @@
 
 .slick-prev{
 	transform: translate(0, -50%) rotate(180deg);
+    z-index:2;
+    &:before{
+        top:-4px;
+    }
 }
 
 .slick-next:focus, .slick-next:hover, .slick-prev:focus, .slick-prev:hover {
@@ -149,11 +164,19 @@
 .slick-next:focus:before, .slick-next:hover:before, .slick-prev:focus:before, .slick-prev:hover:before {
     opacity: 1;
 }
+
+.slick-next.slick-disabled, .slick-prev.slick-disabled{
+    background:none;
+}
+
 .slick-next.slick-disabled:before, .slick-prev.slick-disabled:before {
     opacity: .25;
+    display:none;
 }
 .slick-next:before, .slick-prev:before {
     font-size: 20px;
+    position:absolute;
+    right:-5px;
     line-height: 1;
     opacity: .75;
     color: #fff;
@@ -171,6 +194,9 @@
     content: url("/storage/Gfx/CategSlider/arrow-next.svg")}
 .slick-next {
     right: -25px;
+    &:before{
+        top:0;
+    }
 }
 [dir=rtl] .slick-next {
     right: auto;

@@ -1,51 +1,31 @@
 .newsLetter{
-	
-	form{
-		position:relative;
-	}
+	position:relative;
+	width:250px;
 
-	.newsLetter--input{
+	.newsLetter--btn{
 		background: rgba($white,0.12);
 		border:1px solid transparent;
-		width:95%;
+		border-radius:25px;
     	padding: 1em;
-    	padding-right: 50px;
+    	padding-right:50px;
     	font-size:14px;
     	color:$white;
-    	&::placeholder{
-    		color:$grey3;
-    	}
-    	&:focus{
+    	&:hover{
     		border:1px solid $event-teal;
+    		cursor:pointer;
     	}
-    	@media #{$larg} {
-			width:265px;
-			padding-right:70px;
-		}
-
-	}
-	.newsLetter--submit{
-		margin-left: -45px;
-	    width: 45px;
-	    height: 35px;
-	    border: none;
-	    background: transparent;
-	    position: absolute;
-	    cursor: pointer;
 		&::after{
 			content:url("/storage/Gfx/Global/Footer/envelope.svg");
 			position: absolute;
-		    top: 10px;
-		    right: 10px;
+		    top: 12px;
+		    right: 30px;
 		}
 	}
 }
 
 //IN HEADER
 
-.App-header--newsletter .newsLetter{
+.App-header--newsletter .newsLetter--btn{
 	border:1px solid $grey3;
-	.newsLetter--input{
-		color:$black;
-	}
+	color:$grey3;
 }

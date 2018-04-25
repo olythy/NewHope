@@ -59,13 +59,28 @@
 		padding:0;
 
 		.Event-card-date{
-			h6::before{
-				content: url(/storage/Gfx/Menu/calendarW.svg);
+			h6{
+				position:relative;
+				padding-left:2em;
+				&::before{
+					content: url(/storage/Gfx/Menu/pinW.svg);
+					position: absolute;
+			    	left: 0px;
+			    	top: 1px;
+				}
 			}
 		}
 		.Event-card-place{
-			h6::before{
-				content: url(/storage/Gfx/Menu/pinW.svg);
+			h6{
+				position:relative;
+				padding-left:2em;
+				margin-bottom:.5em;
+				&::before{
+					content: url(/storage/Gfx/Menu/calendarW.svg);
+					position: absolute;
+			    	left: 0px;
+			    	top: 1px;
+				}
 			}
 		}
 	}
@@ -172,16 +187,7 @@
 			content:url("/storage/Gfx/Menu/arrow-blue.svg");
 		}
 		&:hover > p{
-			color:$light-blue;
-		}
-		.App-header--subli a:hover {
-			color:$light-blue;
-		}
-		.all a{
-			color:$light-blue;
-			&:after{
-				content:url("/storage/Gfx/Global/seeAll-lightblue.svg")
-			}
+			color:#00B2FF; //?
 		}
 	}
 	&.startup{
@@ -197,8 +203,7 @@
 		.Startup-card--category{
 			color:$orange;
 		}
-		.all a{
-			margin-top:1em;
+		.seeAll a{
 			color:$orange;
 			&:after{
 				content:url("/storage/Gfx/Global/seeAll-orange.svg")
@@ -206,12 +211,6 @@
 		}
 		.App-header--submenu.col3 .App-header--submenu---wrp{
 			flex-basis:100%;
-			&.competitions{
-				margin-top:1em;
-				.App-header--subli{
-					flex-basis:48%;
-				}
-			}
 		}
 	}
 	&.about{
@@ -221,25 +220,19 @@
 		&:hover > p{
 			color:$event-teal;
 		}
-		.App-header--subli {
-			.News-card:hover{
-				h5{
-					color:$event-teal;
-				}
-			}
-			a:hover {
-				color:$event-teal;
-			}
-		}
-		.News-card--author-category{
+		.App-header--subli a:hover {
 			color:$event-teal;
 		}
-		.all a{
+		.News-card--author-category a{
+			color:$event-teal;
+		}
+		.all a,.seeAll a{
 			color:$event-teal;
 			&:after{
 				content:url("/storage/Gfx/Global/seeAll-lightblue.svg")
 			}
 		}
+
 	}
 
 	@media #{$larg} {
@@ -267,7 +260,7 @@
 		}
 		&.events{
 			&:hover > p{
-				border-bottom:2px solid $light-blue;
+				border-bottom:2px solid #00B2FF;
 			}
 		}
 		&.startup{
@@ -305,22 +298,12 @@
 }
 
 .App-header-dropdownBox--inner{
-	margin-top: .5em;
+	margin-top: 1.5em;
     //transition: all 1s;
     @media #{$larg} {
     	margin-top: 1.2em;
     	padding:3em 0;
     	background: linear-gradient(180deg, $grey9 0%, $white 100%);
-    }
-
-    .App-header--subtitle h3{
-    	display: inline-block;
-    	background: $white;
-    	padding-right: 1em;
-    	text-transform:uppercase;
-    	@media #{$larg} {
-    		background: $grey9;
-    	}
     }
 
     .Layout-width{
@@ -343,7 +326,7 @@
 	}
 	.Event {
 		flex-basis:32%;
-		margin:1em 0;
+		margin-bottom:1.5em;
 		@media #{$larg} {
     		margin:0;
     	}
@@ -387,23 +370,19 @@
 	flex-basis:100%;
 	.App-header--submenu---wrp{
 		flex-basis:100%;
-		&.competitions{
+		&.zones{
 			flex-basis:32%;
 			margin-top:1em;
 			@media #{$larg} {
     			margin-top:2em;
     		}
+    		.App-header--subul{
+    			justify-content:flex-start;
+    		}
 			.App-header--subli{
 				flex-basis:32%;
+				margin-right:1.5em;
 			}
-		}
-		.App-header--subtitle{
-			display:block;
-			background:none;
-			margin-top:1em;
-			@media #{$larg} {
-    			margin-top:0;
-    		}
 		}
 		.App-header--subli{
 			flex-basis:100%;
@@ -442,19 +421,10 @@
 }
 
 .App-header--subli{
-	margin:.75em 0;
+	margin-bottom:1.5em;
 	flex-basis:48%;
 	font-weight:normal;
 	text-transform:none;
-}
-
-.App-header--subtitle{
-	display:none;
-	background:repeating-linear-gradient(-45deg,$grey4,$grey4 3px,transparent 3px,transparent 6px);
-	margin-bottom: .75em;
-	@media #{$larg} {
-		display:block;
-	}
 }
 
 .App-header--social{

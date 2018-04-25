@@ -3,24 +3,83 @@
 	display: flex;
 	flex-basis:100%;
     justify-content: space-between;
-    margin-bottom:2em;
+    margin-bottom:1.5em;
 	.Headline--title{
-		padding-right:1.5em;
+		padding-right:1em;
+		h2,h3{
+			white-space:nowrap;
+		}
+		@media #{$larg} {
+			padding-right:1.5em;
+		}
+	}
+
+	&.dates{
+		flex-direction:column;
+		.Headline--dates{
+			display:flex;
+			margin-top:1em;
+			
+			.Headline--dates---btn{
+				display:inline-flex;
+				padding-right:1em;
+				margin-left:-.5em;
+				@media #{$larg} {
+					padding-right:1.5em;
+				}
+			}
+			.Stripe{
+				margin-bottom:.25em;
+				background:repeating-linear-gradient(-45deg, $grey3, $grey3 3px, transparent 3px, transparent 6px)
+			}
+		}
+	}
+}
+
+.DOT{
+	margin: 0 .25em;
+	display: inline-block;
+	color: $grey3;
+}
+
+.GreyBG{
+	background:$grey5;
+	padding:3em 0;
+	p{
+		max-width:700px;
+	}
+}
+
+.GreyBG-72{
+	background:$grey5;
+	padding:3em 0;
+	@media #{$larg} {
+		padding:4.5em 0;
 	}
 }
 
 .seeAll{
 	display:flex;
-	padding-left:1em;
-	background:$white;
+	margin-left:1.5em;
 	a{
-		margin:auto;
+		margin:auto 0;
+		width:70px;
 		font-weight:bold;
+		position:relative;
+		padding-right:1.5em;
+		color:$purple;
 		&:after{
-			margin-left:.5em;
+			content:url("/storage/Gfx/Global/seeAll-purple.svg");
+			transition:all $transition-fast;
+			position:absolute;
+			right:0;
 		}
 		&:hover{
-			
+			&:after{
+				transition:all $transition-fast;
+				position:absolute;
+				right:-5px;
+			}
 		}
 	}
 }
@@ -33,18 +92,50 @@
 	}
 }
 
+.Stripe{
+	width:100%;
+	height:25px;
+	background:repeating-linear-gradient(-45deg, $grey4, $grey4 3px, transparent 3px, transparent 6px);
+	margin-top:auto;
+	margin-bottom:.5em;
+	margin-right:auto;
+	&.red{
+		background:repeating-linear-gradient(-45deg, $red, $red 3px, transparent 3px, transparent 6px);
+	}
+}
+
+//MENU Stripe
+
+.App-header{
+	.Stripe{
+		margin-bottom: .25em;
+	}
+}
+
+//CATEGORYPAGE STRIPE 
+
+.NewsCategoryPage{
+	.Stripe{
+		margin-bottom: .25em;
+		margin-left:1.5em;
+	}
+}
+
 .Intro--wrp{
 	display: flex;
 	flex-direction:column;
     position: relative;
     @media #{$larg-60} {
     	flex-direction:row;
-    	margin-bottom:5em;
+    	margin-bottom:3em;
     }
 
     .IntroText{
-    	flex-basis:50%;
-    	margin:4em 0;
+    	flex-basis:48%;
+    	margin:3em 0;
+    	@media #{$larg} {
+    		margin-top:4.5em;
+    	}
 
     	h2{
     		margin-bottom:.75em;
@@ -52,35 +143,10 @@
     }
 }
 
-.Talks-and-Twitter--wrp{
-	background:url("/storage/Gfx/Twitter/twitter-bgD.jpg");
-	@include bg-cover-pos;
-	padding:3em 0;
-	position:relative;
-	&:after{
-		content: '';
-	    width: 100%;
-	    height: 150px;
-	    background: url(/storage/Gfx/bg-line.png);
-	    background-size: cover;
-	    background-position: center;
-	    position: absolute;
-	    left: 0;
-	    bottom: 0;
-	}
-}
-
-.Headline-wBG{
-	flex-basis:100%;
-
-	h2{
-		color:$white;
-	}
-}
-
 .Session--more{
 	flex-basis:100%;
 	text-align:center;
+	margin-top:1em;
 }
 
 .drag{
@@ -89,8 +155,79 @@
 		display: none; 
 	}
 	.Layout-width{
-		margin:2em auto;
 		display:flex;
 		justify-content:space-between;
 	}
+}
+
+//SUBMENU DRAG
+
+.sub-drag{
+	background: linear-gradient(360deg, $dark-blue 0%, $black 100%), $black;
+	padding: .75em 0;
+	span{
+		color:$white;
+	    padding: .5em;
+	    margin-right: 2em;
+	    &.active{
+	    	background:$white;
+	    	color:$dark-blue;
+	    }
+	}
+	.Layout-width{
+		display:-webkit-box;
+	}
+}
+
+//INFOGRAPH
+
+.InfoGraph--wrp{
+	background:$grey5;
+	padding:3em 0;
+	@media #{$larg} {
+		padding:4.5em 0;
+	}
+}
+
+.InfoGraph{
+	strong{
+		color:$orange;
+		display:inline-block;
+		margin:0;
+	}
+	h2{
+		color:$grey3;
+		letter-spacing:0;
+		margin-top:1em;
+	}
+	p{
+		max-width:700px;
+		margin:1.5em 0;
+	}
+}
+
+.WhoWeAre{
+	.InfoGraph{
+		strong{
+			color:$light-blue;
+		}
+	}
+}
+
+
+//VIDEO
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

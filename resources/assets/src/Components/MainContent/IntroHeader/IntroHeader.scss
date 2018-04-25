@@ -4,58 +4,277 @@
 	color:$white;
 	padding:3em 0;
 	@media #{$larg} {
-    	padding:5em 0;
+    	padding:4.5em 0;
     }
 
 	&:after{
-		content:'';
-		width:100%;
-		height:150px;
-		background:url("/storage/Gfx/bg-line.png");
-		@include bg-cover-pos;
-		position:absolute;
-		left:0;
-		bottom:0;
+		@include after-BGline;
 	}
 
 	&.sldr{
-		height:650px;
-	}
-	&.nrml{
-		min-height:500px;
+		height:500px;
+		@media #{$larg} {
+    		height:586px;
+    	}
+    	.MainContent--header---wrp .MainContent--title h1{
+    		max-height:270px;
+    	}
 	}
 
-	//SLIDER
-
+	//SLIDERS
 	&.slideOne{
-		background: url(/storage/Gfx/slideOne-bgD.jpg);
+		@media #{$MAXmedium} {
+			background-image: url(/storage/Gfx/Sliders/slideOne/slideOne-bgM.jpg);
+		}
+		@media #{$medium-larg} {
+			background-image: url(/storage/Gfx/Sliders/slideOne/slideOne-bgT.jpg);	
+		}
+		@media #{$larg} {
+			background-image: url(/storage/Gfx/Sliders/slideOne/slideOne-bgD.jpg);
+		}		
     	@include bg-cover-pos;
 	}
 	&.slideTwo{
-		background: url(/storage/Gfx/slideTwo-bgD.jpg);
+		background: url(/storage/Gfx/Sliders/slideTwo/slideTwo-bgD.jpg);
     	@include bg-cover-pos;
 	}
 	&.slideThree{
-		background: url(/storage/Gfx/slideThree-bgD.jpg);
+		@media #{$MAXmedium} {
+			background-image: url(/storage/Gfx/Sliders/slideThree/slideThree-bgM.jpg);
+		}
+		@media #{$medium-larg} {
+			background-image: url(/storage/Gfx/Sliders/slideThree/slideThree-bgT.jpg);	
+		}
+		@media #{$larg} {
+			background-image: url(/storage/Gfx/Sliders/slideThree/slideThree-bgD.jpg);
+		}
     	@include bg-cover-pos;
 	}
+
 	//LONDON
-	&.London{
+	&.London-hdr{
 		background: url(/storage/Gfx/Events/EventsLondon-bgD.jpg);
     	@include bg-cover-pos;
-    	position:relative;
-    	&:after{
-    		content:'';
-    		height:100%;
-    		width:100%;
-    		position:absolute;
-    		top:0;
-    		left:0;
-    		background: linear-gradient(to right, $purple, rgba($purple,0));
-    		@media #{$larg} {
-    			background: linear-gradient(to right, $purple, rgba($purple,0) 60%);
-    		}
-    	}
+	}
+
+	//AMSTERDAM
+	&.Amsterdam-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/showAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/showAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/showAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//AMS-SPEAKER
+	&.SpeakersAMS-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/Speakers/speakersAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/Speakers/speakersAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Speakers/speakersAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//AMS-AGENDA
+	&.AgendaAMS-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Agenda/agendaAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Agenda/agendaAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Agenda/agendaAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//AMS-SPONSORS
+	&.SponsorsAMS-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//AMS-STARTUP
+	&.StartupAMS-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Startup/startupAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Startup/startupAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Startup/startupAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//AMS-TRAVEL
+	&.TravelAMS-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/Travel/travelAMS-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/Travel/travelAMS-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Travel/travelAMS-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+
+	//USA
+	&.America-hdr{
+		background: url(/storage/Gfx/Events/america-bgD.jpg);
+    	@include bg-cover-pos;
+	}
+	//USA-SPEAKER
+	&.SpeakersUSA-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/about-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/about-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Speakers/speakersUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//USA-AGENDA
+	&.AgendaUSA-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/about-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/about-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Agenda/agendaUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//USA-SPONSOR
+	&.SponsorsUSA-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/about-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/about-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//USA-STARTUP
+	&.StartupUSA-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/about-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/about-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Startup/startupUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+	//USA-TRAVEL
+	&.TravelUSA-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/Travel/travelUSA-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/Travel/travelUSA-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/Travel/travelUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+
+	//CAREERS
+	&.Careers-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/Careers/careers-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/Careers/careers-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/About/Careers/careers-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+
+	//ABOUT
+	&.About-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/About/about-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/About/about-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/About/about-bgD.jpg);
+			@include bg-cover-pos;	
+		}
+	}
+
+	//STARTUPECO
+	&.StartupECO-hdr{
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Startup/startupECO-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Startup/startupECO-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Startup/startupECO-bgD.jpg);
+			@include bg-cover-pos;	
+		}		
 	}
 }
 
@@ -71,18 +290,33 @@
 		flex-basis:100%;
 		z-index:80;
 		margin-bottom:2em;
-		max-width:400px;
+		max-width:380px;
 		cursor:default;
 		@media #{$larg} {
-    		flex-basis:55%;
-    		margin-bottom:0;
+    		flex-basis:70%;
+    		margin:auto 0;
     		max-width:none;
+
+    		h1{
+    			max-height:140px;
+    			overflow-y:hidden;
+    		}
+    	}
+    	@media #{$extra-larg} {
+    		flex-basis:55%;
     	}
 
-		button{
-			margin-top:2em;
+    	.MainContent--title---authorCateg{
+    		padding-bottom:1em;
+    	}
+
+		.btn-fw,.btnspn-b,.btnspn-w{
+			margin-top:1.5em;
 			position: relative;
     		z-index: 80;
+    		@media #{$larg} {
+    			margin-top:2.5em;
+    		}
 		}
 	}
 	.MainContent--highlight{
@@ -93,7 +327,7 @@
 		left:50%;
 		z-index:80;
 		transform: translate(-50%, 0);
-		@media #{$larg} {
+		@media #{$larg-60} {
 			flex-direction:column;
 			flex-basis:33%;
 			margin-top:0;
@@ -102,8 +336,8 @@
 		}
 		.Highlight{
 			background:rgba($black,0.6);
-			width:15px;
-			height:15px;
+			width:10px;
+			height:10px;
 			border:2px solid transparent;
 			border-radius:25px;
 			cursor:pointer;
@@ -114,10 +348,10 @@
 			.Highlight--details{
 				display:none;
 			}
-			@media #{$larg} {
+			@media #{$larg-60} {
 				width:auto;
 				height:auto;
-				padding:1.5em;
+				padding:1em;
 				margin:1em 0;
 				border-radius:0;
 				h5{margin-top:.5em;}
@@ -126,8 +360,8 @@
 				}
 			}
 			.Highlight--category{
-				color:$grey5;
-				a{color:$grey5}
+				color:$grey3;
+				a{color:$grey3}
 			}
 
 			&.talk{
@@ -145,8 +379,8 @@
 				background:$white;
 				color:$black;
 				.Highlight--category{
-					color:$black;
-					a{color:$black}
+					color:$grey2;
+					a{color:$purple}
 				}
 				&.talk{
 					h5:before{
@@ -179,36 +413,87 @@
 
 ////NEWS PAGE HEADER END
 
+
+
+
+
 //EVENT HEADER
 
 .Event--name{
-	h5{
+	span{
 		background:$light-blue;
 		display:inline-block;
 		padding:.25em .5em;
-		margin-bottom:.5em;
+		margin-bottom:.75em;
 	}
 }
+
+.America{
+	.Event--name{
+		span{
+			background:$red;
+		}
+	}
+}
+
+
+
 .Event--place-and-date{
 	display:flex;
-	margin-bottom:2em;
+	margin-bottom:1.5em;
+	margin-left: 1.25em;
+	@media #{$larg-60} {
+		margin-bottom:2em;
+	}
 	.Event-card-place{
-		margin-right:1em;
-		h6:before{
+		margin-right:2em;
+		position:relative;
+
+		span:before{
 			content: url(/storage/Gfx/pinW.svg);
-    		display: inline-block;
-    		margin-right: .5em;
+    		position: absolute;
+    		left: -20px;
+    		top: 1px;
 		}
 	}
 	.Event-card-date{
-		h6:before{
+		position:relative;
+
+		span:before{
 			content: url(/storage/Gfx/calendarW.svg);
-	    	display: inline-block;
-	    	margin-right: .5em;
+	    	position: absolute;
+		    left: -20px;
+		    top: 0px;
 		}
 	}
 }
 
 .Intro-text{
-	margin-top:1em;
+	margin-top:.5em;
+	max-width:80%;
+}
+
+//HOME HEADER
+
+.Home .MainContent--header{
+	margin-bottom:3em;
+	@media #{$larg} {
+    	margin-bottom:4.5em;
+    }
+}
+
+
+//EVENT HEADER BG GRADIENS
+
+.America .MainContent--header:before,.Amsterdam .MainContent--header:before{
+	content:'';
+	height:100%;
+	width:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background: linear-gradient(to right, $purple, rgba($purple,0));
+	@media #{$larg} {
+		background: linear-gradient(to right, $purple, rgba($purple,0) 60%);
+	}
 }

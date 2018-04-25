@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import NewsLi from './News-li/News-li'
-import TalksLi from './Talks-li/Talks-li'
 import EventsLi from './Events-li/Events-li'
 import StartupLi from './Startup-li/Startup-li'
 import AboutLi from './About-li/About-li'
@@ -49,7 +48,7 @@ class Menu extends Component {
 									<div className="App-header--ticket---wrp">
 										<div className="Event-card--place-and-date">
 								    		<div className="Event-card-place">
-								          		<h6>Amsterdam &middot; Rai</h6>
+								          		<h6>Amsterdam <div className="DOT">&middot;</div> RAI</h6>
 								        	</div>
 								    		<div className="Event-card-date">
 								          		<h6>23-24. October 2018</h6>
@@ -63,7 +62,6 @@ class Menu extends Component {
 							
 							<ul className="App-header--ul">
 					        	<NewsLi {...this.state} toggleMenu={this.toggleMenu}/>
-					        	<TalksLi {...this.state} toggleMenu={this.toggleMenu}/>
 								<EventsLi {...this.state} toggleMenu={this.toggleMenu}/>
 								<StartupLi {...this.state} toggleMenu={this.toggleMenu}/>
 								<AboutLi {...this.state} toggleMenu={this.toggleMenu}/>

@@ -11,10 +11,11 @@ let mix = require('laravel-mix');
  | file for the application as well as bundling up all the JS files.
  |
  */
+ 
+mix.webpackConfig({ devtool: "inline-source-map" });
 
 mix.react('resources/assets/src/index.js', 'public/js')
-   .sass('resources/assets/src/index.scss', 'public/css');
+   .sass('resources/assets/src/index.scss', 'public/css').sourceMaps();
    
 mix.react('resources/assets/auth/js/app.js', 'public/js')
-   .sass('resources/assets/auth/sass/app.scss', 'public/css');
-   
+   .sass('resources/assets/auth/sass/app.scss', 'public/css').sourceMaps();

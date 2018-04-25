@@ -1,62 +1,114 @@
 .Event-card{
 	width:305px;
+	height:370px;
 	margin-right:1.5em;
 	position:relative;
-	border:1px solid transparent;
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
 	z-index:1;
 	display:flex;
 	flex-direction:column;
 
 	&:hover{
-		cursor:pointer;
+		box-shadow: 0px 4px 16px rgba($black, 0.1);
+    	cursor:pointer;
+    	transition: all $transition-fast;
 	}
 
-	&.london {
-		&:hover{
-			h4{
-				color:$green;
-			}
-		}
-		.Event-card--name{
-			background:$green;
-		}
-	}
 	&.america{
-		&:hover{
-			h4{
-				color:$red;
-			}
-		}
 		.Event-card--name{
 			background:$red;
 		}
 	} 
 	&.amsterdam{
-		&:hover{
-			h4{
-				color:$light-blue;
-			}
-		}
 		.Event-card--name{
 			background:$light-blue;
+		}
+	}
+	&.london{
+		.Event-card--name{
+			background:$green;
+		}
+	}
+
+	&.newsLetter{
+		background:$grey5;
+		padding:3.5em 4em 1em 1.5em;
+		@media #{$larg-larg60} {
+			padding-top:1em;
+		}
+		position:relative;
+		&:after{
+			content:'';
+			width:24px;
+			height:100%;
+			background: repeating-linear-gradient(-45deg, rgba($purple,1), rgba($purple,1) 2px, transparent 2px, transparent 4px);
+			position:absolute;
+			right:0;
+			top:0;
+		}
+		&:hover{
+			cursor:default;
+		}
+
+		h2{
+			color:$black;
+			margin-bottom:.5em;
+		}
+		p{
+			color:$grey1;
+			width:95%;
+			margin-bottom:1.5em;
+			@media #{$larg-larg60} {
+				margin-bottom:1em;
+				font-size:.875em;
+			}
+		}
+		.newsLetter-signUp{
+			background:$white;
+			border:1px solid $grey4;
+			padding:.5em 1em;
+			border-radius:100px;
+			min-width: 110px;
+    		align-self: flex-start;
+    		font-weight: bold;
+    		position:relative;
+    		text-align:right;
+
+    		&:before{
+    			content:url("/storage/Gfx/Global/Footer/envelope.svg");
+				position: absolute;
+			    top: 5px;
+			    left: 10px;
+    		}
+    		&:hover{
+    			cursor:pointer;
+    			border-color:$grey3;
+    		}
 		}
 	} 
 
 	@media #{$extra-larg} {
     	flex-basis:32%;
-    	margin:0;
     }
 }
 
 .Event-card--details{
 	padding:1em;
 	border:2px solid $grey4;
+	border-top:none;
 	background:$white;
+	display:flex;
+	flex-direction:column;
+	height:100%;
 }
 
 .Event-card--img{
-	display:flex;
-	img{width:100%;}
+	height:183px;
+	overflow:hidden;
+	img{
+		width:100%;
+		display:flex;
+	}
 }
 
 .Event-card--name{
@@ -69,9 +121,16 @@
 	padding-bottom:.75em;
 }
 
+.Event-card-afterText{
+	p{
+		color:$grey1;
+	}
+}
+
 .Event-card--place-and-date{
 	border-top:1px solid $grey5;
 	padding-top:1em;
+	margin-top:auto;
 
 	.Event-card-date{
 		h6::before{
@@ -81,7 +140,8 @@
 		}
 	}
 	.Event-card-place{
-		h6::before{
+		display:flex;
+		h6.Event-card--city::before{
 			content: url(/storage/Gfx/pin.svg);
 			display:inline-block;
 			margin: 0 1em .5em 1px;
@@ -94,9 +154,17 @@
 .App-header--sub{
 	.Event-card{
 		width:auto;
+		height:auto;
 		margin:0;
+		@media #{$larg} {
+			height:370px;
+		}
+		@media #{$larg-larg60} {
+			height:340px;
+		}
 		.Event-card--img{
 			display:grid;
+			height:auto;
 		}
 		.Event-card--details{
 			@media #{$larg} {
@@ -108,12 +176,10 @@
 		}
 		.Event-card--name{
 			@media #{$larg} {
-				padding-right:8em;
 				padding-left:1em;
 			}
 			@media #{$extra-larg} {
 				padding-left:1.5em;
-				padding-right:0;
 			}	
 		}
 	}

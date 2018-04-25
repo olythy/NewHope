@@ -2,14 +2,14 @@
 	padding:1em;
 	position:relative;
 	background:$white;
-	border:1px solid $grey4;
+	box-shadow: 0px 1px 4px rgba($black, 0.1);
 	flex-basis:100%;
 	margin-bottom:1em;
 	cursor:pointer;
 	z-index:1;
 	&:hover{
-		transition:all $transition-fast;
-		background:rgba($white, .85);
+		box-shadow: 0px 4px 16px rgba($black, 0.1);
+    	transition: all $transition-fast;
 	}
 	
 	@media #{$medium-40} {
@@ -17,12 +17,13 @@
     }
 
 	@media #{$larg-60} {
-    	flex-basis:32%;
+    	flex-basis:31.75%;
+    	margin-bottom:0;
     }
 	
 	span{
 		color:$grey2;
-		margin-top: .25em;
+		font-weight:normal;
 	}
 	&:after{
 		content:url("/storage/Gfx/Twitter/twitter.svg");
@@ -37,10 +38,23 @@
 		right: 45px;
     	top: 15px;
 	}
+
+	.atSign{
+		color:$twitter;
+		display:inline-block;
+		margin-bottom:0;
+	}
+}
+
+.TwitterCard--Name{
+	h5{
+		font-weight:normal;
+	}
 }
 
 .TwitterCard-IMG{
 	margin-right:.5em;
+	width:36px;
 }
 
 .TwitterCard--wrp{
@@ -51,6 +65,10 @@
 	display:flex;
 	justify-content:space-between;
 	flex-wrap:wrap;
+	margin-top:3em;
+	@media #{$larg} {
+		margin-top:4.5em;
+	}
 }
 
 .TwitterCard--Content{
