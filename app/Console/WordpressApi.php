@@ -61,7 +61,7 @@ class WordpressApi
         $article->featured_image = $this->featuredImage($data->_embedded);
         $article->featured = ($data->sticky) ? 1 : null;
         $article->excerpt = $data->excerpt->rendered;
-        // $article->content = $data->content->rendered;
+        $article->content = $data->content->rendered;
         $article->format = $data->format;
         $article->status = 'publish';
         $article->publishes_at = $this->carbonDate($data->date);
