@@ -24,9 +24,29 @@ class WordpressApi
 
     public function importPosts($page = 1)
     {
-        $posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=modified&page=' . $page));
-        foreach ($posts as $post) {
-            $this->syncArticle($post);
+
+        if (0) {
+            // get all posts (first time only!)
+            // wget -S --user-agent="Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2)" http://unleashgroup.io/news/wp-json/wp/v2/posts
+            // details in http header:
+            // X-WP-Total: 754
+            // X-WP-TotalPages: 76
+            for ($i=0; $i<76; $i++) {
+                $page=$i+1;
+                $posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=date&order=asc&page=' . $page));
+                //$posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=modified&page=' . $page));
+                foreach ($posts as $post) {
+                    $this->info = sprintf (WHITE."Date:".NORMAL." %-20s ".WHITE."Mod:".NORMAL." %-20s ".WHITE."id:".NORMAL."%4u ".WHITE."slug:".NORMAL." %-70s ".WHITE."title:".NORMAL." %s\n",
+                        $post->date, $post->modified, $post->id, $post->slug, $post->title->rendered);
+                    $this->syncArticle($post);
+                }
+            }
+        } else {
+            // get page of latest articles ordered by modified descending
+            $posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=modified&order=desc&page=' . $page));
+            foreach ($posts as $post) {
+                $this->syncArticle($post);
+            }
         }
     }
 
@@ -35,9 +55,13 @@ class WordpressApi
         $found = DB::collection('articles')->where('wp_id', $data->id)->first();
 
         if (!$found) {
+            // redirect output to logfile /var/log/unleashimport.log in /etc/crontab
+            $this->info = sprintf ("Date: %-20s Mod: %-20s id:%4u slug: %-70s title: %s\n",
+                        $data->date, $data->modified, $data->id, $data->slug, $data->title->rendered);
             return $this->createArticle($data);
         }
 
+        // todo update
         // $found = Articles::find($found['_id']);
 
         // if ($found and $found->updated_at->format("Y-m-d H:i:s") < $this->carbonDate($data->modified)->format("Y-m-d H:i:s")) {

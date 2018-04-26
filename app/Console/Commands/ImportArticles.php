@@ -47,11 +47,11 @@ class ImportArticles extends Command
      */
     public function handle()
     {
-        $this->info('Start import ...');
+//        $this->info('Start import ...');
 
         $this->api->setUrl($this->url)
             ->importPosts();
 
-        $this->info('Finish!');
+//        $this->info('Finish!');
     }
 }
