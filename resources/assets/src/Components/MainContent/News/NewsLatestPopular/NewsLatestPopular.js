@@ -27,6 +27,7 @@ class NewsLatestPopular extends Component {
     }
 
     render(){
+
         return(
             <div className="News--wrp dflt">
                 <div className="Headline">
@@ -58,10 +59,10 @@ class NewsLatestPopular extends Component {
                     {this.props.stripe ? <div className="Stripe"></div> : null }
                     {this.props.seeAll ? <div className="seeAll">
                         <Link to="news">See all</Link>
-                    </div> : null} 
+                    </div> : null}
                 </div>        
                 <div className="NewsCard--wrp">
-                    {this.props.children}
+                    <div>{React.cloneElement(this.props.children, {...this.props})}</div>
                 </div>
             </div>
         )

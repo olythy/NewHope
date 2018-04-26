@@ -26,9 +26,7 @@ class Home extends Component {
                 <div className="Layout-width">
                     <NewsLatestPopular name="News" showCategs categOne="Latest" categTwo="Popular" seeAll >
                         <NewsCard />
-                        <NewsCard />
-                        <NewsCard />
-                        <NewsCard />
+                       
                     </NewsLatestPopular>
                 </div>
                     <Events />

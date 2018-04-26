@@ -4,6 +4,8 @@ import DragScroll from 'react-dragscroll';
 import SubMenuAMS from '../SubMenu/SubMenuAMS/SubMenuAMS'
 import Button from '../../Commons/Button/Button'
 
+import AgendaPreview from '../../Agenda/AgendaPreview/AgendaPreview'
+
 import SpeakerCard from '../Speakers/SpeakerCard/SpeakerCard'
 import SpeakerCardHighLight from '../Speakers/SpeakerCard/SpeakerCardHighLight/SpeakerCardHighLight'
 import BecomeCard from '../BecomeCard/BecomeCard'
@@ -21,6 +23,10 @@ import TicketCard from '../Tickets/TicketCard/TicketCard'
 import NewsLatestPopular from '../../News/NewsLatestPopular/NewsLatestPopular'
 
 class Amsterdam extends Component {
+
+	constructor(props){
+		super(props);
+	}
 
 	render(){
 		return(
@@ -107,13 +113,7 @@ work together!" modalText="Become a speaker Example Text" />
 					<div className="Agenda--wrp">
 						<div className="Layout-width">
 							<NewsLatestPopular name="Agenda" showCategs categOne="Day 01" categTwo="Day 02">
-								<div className="Agenda--preview">
-									<DragScroll width height>
-										<div className="Agenda--preview---drag">
-											<img src="/storage/Gfx/Agenda/agenda-preview.jpg" alt="Agenda Preview" />
-										</div>
-									</DragScroll>
-								</div>
+								<AgendaPreview />
 							</NewsLatestPopular>
 							<div className="Agenda--HighlightSessions">
 								<div className="Headline">
