@@ -356,6 +356,7 @@
 	@media #{$larg} {
 		flex-direction:row;
 		margin-bottom:1.5em;
+		min-height:300px;
 	}
 	.TravelMap--img{
 		@include img-crop--parent(auto);
@@ -366,6 +367,7 @@
 	}
 	.TravelMap--venue{
 		flex-basis:60%;
+		display:flex;
 		padding:3em 1.5em;
 		background:$light-blue;
 		h1{
@@ -373,8 +375,8 @@
 			margin-bottom:.25em;
 			line-height:1em;
 		}
-		p{
-			color:$white;
+		.TravelMap--wrp{
+			margin:auto;
 		}
 	}
 }

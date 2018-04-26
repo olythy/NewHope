@@ -24,10 +24,12 @@ class PromoBox extends Component {
 		)
 
 		return(
-			<section className="PromoBox">
-				<img src={this.props.src} alt="IMG" />
-				{this.props.name ? boxDetails : null}
-			</section>
+			<div className="boxStripe">
+				<section className="PromoBox">
+					<img src={this.props.src} alt="IMG" />
+					{this.props.name ? boxDetails : null}
+				</section>
+			</div>
 		)
 	}
 }

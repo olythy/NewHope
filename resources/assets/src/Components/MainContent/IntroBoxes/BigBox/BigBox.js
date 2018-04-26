@@ -17,6 +17,7 @@ class BigBox extends Component {
 					<div className="SmallBox---wrp">
 						{this.props.person ? <p>{this.props.person}</p> : null}
 						{this.props.jobTitle ? <span>{this.props.jobTitle}</span> : null}
+						{this.props.logo ? <div className="testimonial--logo"><img src={this.props.logo} alt={this.props.logoAlt} /> </div> : null}
 					</div>
 				</div>
 			)

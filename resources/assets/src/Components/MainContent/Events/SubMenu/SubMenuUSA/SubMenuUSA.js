@@ -18,7 +18,6 @@ class SubMenuUSA extends Component {
 			          	<div><Link to="/america/agenda"><span className={this.isActive("Agenda")}>Agenda</span></Link></div>
 			          	<div><Link to="/america/startup"><span className={this.isActive("Startups")}>Startups</span></Link></div>
 			          	<div><Link to="/america/sponsors"><span className={this.isActive("Sponsors")}>Sponsors</span></Link></div>
-			          	<div><Link to="/america/volunteer"><span className={this.isActive("Volunteering")}>Volunteering</span></Link></div>
 			          	<div><Link to="/america/travel"><span className={this.isActive("Travel")}>Travel &amp; Venue</span></Link></div>
 			          	<div><Link to="/america/tickets"><span className={this.isActive("Tickets")}>Tickets</span></Link></div>
 		          	</div>

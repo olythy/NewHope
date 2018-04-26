@@ -18,10 +18,20 @@
 		}
     }
 
+    .drag > div:last-child{
+    	.TicketCard{
+    		margin-right:0;
+    	}
+    }
+
     &.Single{
     	background:$light-blue;
     	.TicketCard--category---BG{
     		background:$light-blue;
+    	}
+    	.Stripe{
+    		width:415px;
+    		margin-left:0;
     	}
     }
 
@@ -35,6 +45,9 @@
     			background:$dark-blue;
     		}
     	}
+    	.TicketCard--access{
+    		color:$dark-blue;
+    	}
     }
     &.Investors{
     	background:$purple;
@@ -45,6 +58,9 @@
     		.TicketCard--category---BG{
     			background:$purple;
     		}
+    	}
+    	.TicketCard--access{
+    		color:$purple;
     	}
     	.Stripe{
     		width:370px;
@@ -60,6 +76,9 @@
     		.TicketCard--category---BG{
     			background:$orange;
     		}
+    	}
+    	.TicketCard--access{
+    		color:$orange;
     	}
     	.Stripe{
     		width:395px;
@@ -190,7 +209,7 @@
 		display:flex;
 		flex-wrap:wrap;
 		jusity-content:space-between;
-		span{
+		span,div{
 			flex-basis:48%;
 			font-weight:normal;
 		}
@@ -231,19 +250,11 @@
 	}
 
 
-	.MainContent--header.nrml.Tickets{
+	.MainContent--header.Tickets{
 		color:$black;
-		height:500px;
 		background: linear-gradient(180deg, rgba($grey5, 0.75) 0%, rgba($grey5, 0) 100%);
-		@media #{$larg} {
-			height:430px;
-		}
-
 		&:after{
 			display:none;
-		}
-		&:before{
-			@include before-line(url("/storage/Gfx/Events/Tickets/ticketsHeaderAMS-line.svg"));
 		}
 	}
 
@@ -266,14 +277,11 @@
 
 	.Ticket-timeLine{
 		display:flex;
-		@media #{$larg} {
-			margin-right:4.5em;
-		}
 
 		.Ticket-timeLine--ticketType{
 			display:flex;
 			flex-direction:column;
-			margin:auto;
+			margin-top:1em;
 			overflow:hidden;
 
 			h4{
@@ -287,11 +295,6 @@
 	    		width:135px;
 	    		margin:auto;
 	    		text-align:center;
-	    		@media #{$larg} {
-	    			text-align:left;
-	    			padding:0;
-	    			margin-left:1.2em;
-	    		}
 	    		&:before{
 	    			content: '';
 				    width: 12px;
@@ -302,11 +305,6 @@
 				    left: 50%;
 				    top: -17px;
 				    transform:translate(-50%,-50%);
-				    
-				    @media #{$larg} {
-	    				left: -20px;
-				    	top: 50%;
-	    			}
 	    		}
 			}
 
@@ -315,9 +313,6 @@
 					text-align:left;
 					&:before{
 						left:6px;
-						@media #{$larg} {
-							left:-20px;
-						}
 					}
 				}
 			}
@@ -330,9 +325,6 @@
 					width:190px;
 					padding-top:.65em;
 					text-align:center;
-					@media #{$larg} {
-						padding-top:0;
-					}
 					&:before{
 		    			content: '';
 					    width: 24px;
@@ -343,10 +335,6 @@
 					    left: 50%;
 					    top: -2px;
 					    transform:translate(-50%,-50%);
-					    @media #{$larg} {
-							left:4px;
-							top:20px;
-						}
 	    			}
 				}
 				span{
@@ -355,18 +343,12 @@
 			}
 
 			.Ticket-timeLine--last{
-				padding-bottom:0;
+				padding-right:0;
 				h4{
 					text-align:right;
-					@media #{$larg} {
-						text-align:left;
-					}
 					&:before{
 						right:-6px;
 						left:auto;
-						@media #{$larg} {
-							left:-20px;
-						}
 					}
 				}
 			}
@@ -374,33 +356,11 @@
 
 
 		.drag{
-			@media #{$larg} {
-				position:relative;
-				flex-direction:column;
-				&:before{
-					content: '';
-				    display: block;
-				    width: 4px;
-				    height: 85%;
-				    background: $grey5;
-				    position: absolute;
-				    left: 18px;
-				    top: 0;
-				    margin: 1em 0;
-				}
-			}
 			> div {
-				margin-right:2em;
 				display:flex;
-				margin:1em 0;
+				margin-top:1em;
+				padding-right:3.5em;
 				border-top:4px solid $grey5;
-				@media #{$larg} {
-					margin: 0;
-				    margin-left: 1em;
-				    border-top: none;
-				    padding-bottom: .75em;
-				    width: 95%;
-				}
 			}
 		}
 	}
@@ -430,11 +390,17 @@
 .America {
 	.Tickets--wrp.Single{
 		background:$red;
+		.TicketCard--category---BG{
+    		background:$red;
+    	}
 	}
+	.TicketCard--access{
+    	color:$red;
+    }
 	.TicketCard:before, .TicketCard:after{
 		background:$red;
 	}
-	.MainContent--header.nrml.Tickets{
+	.MainContent--header.Tickets{
 		&:before{
 			@include before-line(url("/storage/Gfx/Events/Tickets/ticketsHeaderUSA-line.svg"));
 		}
@@ -447,4 +413,14 @@
 			}
 		}
 	}					
+}
+
+//AMSTERDAM COLOR
+
+.Amsterdam{
+	.MainContent--header.Tickets{
+		&:before{
+			@include before-line(url("/storage/Gfx/Events/Tickets/ticketsHeaderAMS-line.svg"));
+		}
+	}
 }

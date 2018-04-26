@@ -16,8 +16,6 @@ import London from './Events/London/London'
 
 import StartupHUB from './StartupHUB/StartupHUB'
 
-import Loyalty from './Loyalty/Loyalty'
-
 import WhoWeAre from './About/WhoWeAre/WhoWeAre'
 import Careers from './About/Careers/Careers'
 
@@ -28,16 +26,12 @@ import TravelUSA from './Events/America/Travel/TravelUSA'
 import TravelAMS from './Events/Amsterdam/Travel/TravelAMS'
 
 import SpeakersUSA from './Events/America/Speakers/SpeakersUSA'
-import SpeakersAMS from './Events/Amsterdam/Speakers/SpeakersAMS'
-import SpeakerInfo from './Events/Speakers/SpeakerInfo/SpeakerInfo'
 
 import SponsorsAMS from './Events/Amsterdam/Sponsors/SponsorsAMS'
 import SponsorsUSA from './Events/America/Sponsors/SponsorsUSA'
 
-import AgendaAMS from './Events/Amsterdam/Agenda/AgendaAMS'
 import AgendaUSA from './Events/America/Agenda/AgendaUSA'
 
-import StartupAMS from './Events/Amsterdam/Startup/StartupAMS'
 import StartupUSA from './Events/America/Startup/StartupUSA'
 
 import TicketsAMS from './Events/Amsterdam/Tickets/TicketsAMS'
@@ -59,8 +53,6 @@ class MainContent extends Component {
                               <Route exact path="/london" component={London}/>
 
                               <Route exact path="/startupHUB" component={StartupHUB}/>
-                              
-                              <Route exact path="/loyalty" component={Loyalty}/>
 
                               <Route exact path='/aboutus' component={WhoWeAre} />
                               <Route exact path="/careers" component={Careers}/>                              
@@ -70,22 +62,15 @@ class MainContent extends Component {
                               <Switch>
                                     <Route exact path='/news/categpage' render={routeProps => <NewsCategoryPage {...routeProps} direction={this.props.direction}/>}/>
                                     <Route path="/news/categpage/article" component={NewsArticlePage}/>
-                                    <Route path="/news/author" component={NewsAuthor}/>
-                                    
+
                                     <Route exact path='/america/speakers' component={SpeakersUSA} />
-                                    <Route exact path='/america/speakers/speaker' component={SpeakerInfo} />
                                     <Route exact path='/america/sponsors' component={SponsorsUSA} />
                                     <Route exact path='/america/agenda' component={AgendaUSA} />
                                     <Route exact path='/america/startup' component={StartupUSA} />
                                     <Route exact path='/america/travel' component={TravelUSA} />
                                     <Route exact path='/america/tickets' component={TicketsUSA} />
                                     
-                                    
-                                    <Route exact path='/amsterdam/speakers' component={SpeakersAMS} />
-                                    <Route exact path='/amsterdam/speakers/speaker' component={SpeakerInfo} />
                                     <Route exact path='/amsterdam/sponsors' component={SponsorsAMS} />
-                                    <Route exact path='/amsterdam/startup' component={StartupAMS} />
-                                    <Route exact path='/amsterdam/agenda' component={AgendaAMS} />
                                     <Route exact path='/amsterdam/travel' component={TravelAMS} />
                                     <Route exact path='/amsterdam/tickets' component={TicketsAMS} />                         
                                     

@@ -23,7 +23,7 @@ const TravelAMS = () => (
 									<h2>Amsterdam</h2>
 								</div>
 							</div>
-							<p>Known for its openness, Amsterdam is one of the world’s most multicultural cities, a leading financial centre, and a major arts and cultural capital. A leading world trading centre Amsterdam features on many indexes as one of the best places to live.</p>
+							<p>Known for its openness, Amsterdam is one of the world’s most multicultural cities, a leading financial centre, and a major arts and cultural capital. Easy-to-use public transportation takes you to the heart of the city, so it’s no surprise Amsterdam is one of the world’s most visited cities.</p>
 						</div>
 						<BigBox src="/storage/Gfx/Events/Travel/travelAMS-big.jpg"/>
 					</div>
@@ -44,55 +44,15 @@ const TravelAMS = () => (
 					venueName="Rai Amsterdam"
 					venueText="RAI Amsterdam is the Netherlands’ leading venue for exhibitions and conferences. Just a 15 minute drive to the city centre and the Schiphol Airport, the location of the RAI couldn't be easier."
 				/>
-				<div className="PromoBoxes--wrp">
-					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-startups.jpg" name="Unleash Mobile App" btnName="View" btnLink="/amsterdam/travel" />
-					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-TravelAMS-floorplan.jpg" name="Event Floorplan" btnName="Learn More" btnLink="/amsterdam/travel" />
-					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-TravelAMS-flying.jpg" name="Partners in Flying" btnName="Learn More" btnLink="/amsterdam/travel" />
-				</div>
-				<div className="Headline">
-					<div className="Headline--title">
-						<h2>Hosting Hotel</h2>
-					</div>
-					<div className="Stripe"></div>
-				</div>
-				<HotelHighLightCard />
-				<div className="Headline">
-					<div className="Headline--title">
-						<h2>Hotels in the Area</h2>
-					</div>
-					<div className="Stripe"></div>
-				</div>
-				<div className="Travel--hotels">
-					<HotelCard name="Novotel Amsterdam Excel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Moxy"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Hampton by Hilton"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="ExCel London"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Random Hotel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Novotel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-				   
-					</div>
+				
 			</div>
 		</div>
 		<ContactPerson 
-  		contactIMG="/storage/Gfx/About/contactPerson-Eva.png"
-  		contactName="Éve Juhász"
-  		contactJobTitle="Operations Co-ordinator"
-  		contactMail="eva@unleashgroup.io"
-  		contactLinkedin="/storage/Gfx/Events/Speakers/speaker-linkedin.svg"
-  		contactTwitter="/storage/Gfx/Events/Speakers/speaker-twitter.svg"
-
+	  		contactIMG="/storage/Gfx/About/contactPerson-Eva.png"
+	  		contactName="Éve Juhász"
+	  		contactJobTitle="Operations Co-ordinator"
+	  		contactMail="eva@unleashgroup.io"
+	  		contactLinkedin="https://www.linkedin.com/in/%C3%A9va-juh%C3%A1sz-890b789a/"
   	/>
 	</section>
 )

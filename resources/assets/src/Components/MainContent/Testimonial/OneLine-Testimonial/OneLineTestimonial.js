@@ -9,7 +9,7 @@ const OneLineTestimonial = props => (
 			<SmallBox src={props.smallSrcTwo} />
 		</div>
 		<div className="ImgBoxes--wrp Testimonial">
-			<BigBox title="Thanks to the unleash guys the whole process of reserving a stand and putting out our brand at the location was lightning fast and very simple." person="Jane Erica Hansel" jobTitle="Founder of Default Company Ltd." />
+			<BigBox title={props.testimonialText} person={props.person} logo={props.logo} logoAlt={props.logoAlt} />
 		</div>
 	</div>
 )

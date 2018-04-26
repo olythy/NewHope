@@ -21,6 +21,14 @@
     	}
 	}
 
+	&.Tickets{
+		.MainContent--header---wrp{
+			@media #{$larg} {
+    			flex-direction:column;
+    		}
+		}
+	}
+
 	//SLIDERS
 	&.slideOne{
 		@media #{$MAXmedium} {
@@ -150,17 +158,27 @@
 
 	//USA
 	&.America-hdr{
-		background: url(/storage/Gfx/Events/america-bgD.jpg);
-    	@include bg-cover-pos;
+		@media #{$MAXmedium-40} {
+			background: url(/storage/Gfx/Events/showUSA-bgM.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$medium40-extralarg} {
+			background: url(/storage/Gfx/Events/showUSA-bgT.jpg);
+			@include bg-cover-pos;
+		}
+		@media #{$extra-larg} {
+			background: url(/storage/Gfx/Events/showUSA-bgD.jpg);
+			@include bg-cover-pos;	
+		}
 	}
 	//USA-SPEAKER
 	&.SpeakersUSA-hdr{
 		@media #{$MAXmedium-40} {
-			background: url(/storage/Gfx/About/about-bgM.jpg);
+			background: url(/storage/Gfx/Events/Speakers/speakersUSA-bgM.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$medium40-extralarg} {
-			background: url(/storage/Gfx/About/about-bgT.jpg);
+			background: url(/storage/Gfx/Events/Speakers/speakersUSA-bgT.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$extra-larg} {
@@ -171,11 +189,11 @@
 	//USA-AGENDA
 	&.AgendaUSA-hdr{
 		@media #{$MAXmedium-40} {
-			background: url(/storage/Gfx/About/about-bgM.jpg);
+			background: url(/storage/Gfx/Agenda/agendaUSA-bgM.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$medium40-extralarg} {
-			background: url(/storage/Gfx/About/about-bgT.jpg);
+			background: url(/storage/Gfx/Agenda/agendaUSA-bgT.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$extra-larg} {
@@ -186,11 +204,11 @@
 	//USA-SPONSOR
 	&.SponsorsUSA-hdr{
 		@media #{$MAXmedium-40} {
-			background: url(/storage/Gfx/About/about-bgM.jpg);
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsUSA-bgM.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$medium40-extralarg} {
-			background: url(/storage/Gfx/About/about-bgT.jpg);
+			background: url(/storage/Gfx/Events/Sponsors/sponsorsUSA-bgT.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$extra-larg} {
@@ -201,11 +219,11 @@
 	//USA-STARTUP
 	&.StartupUSA-hdr{
 		@media #{$MAXmedium-40} {
-			background: url(/storage/Gfx/About/about-bgM.jpg);
+			background: url(/storage/Gfx/Startup/startupUSA-bgM.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$medium40-extralarg} {
-			background: url(/storage/Gfx/About/about-bgT.jpg);
+			background: url(/storage/Gfx/Startup/startupUSA-bgT.jpg);
 			@include bg-cover-pos;
 		}
 		@media #{$extra-larg} {

@@ -6,8 +6,7 @@ import NewsCard from '../News/NewsCard/NewsCard'
 import TalksCategory from '../Talks/TalksCategory/TalksCategory'
 import Events from '../Events/Events'
 import StartupBanner from '../StartupHUB/StartupBanner/StartupBanner'
-import Poll from '../Poll/Poll'
-import MobileApp from '../MobileApp/MobileApp'
+import NewsLetterMobileAppBanner from '../NewsLetter-MobileApp-Banner/NewsLetterMobileAppBanner'
 
 
 class Home extends Component {
@@ -24,18 +23,19 @@ class Home extends Component {
             <section className="Home">
                 <HeaderSlider />
                 <div className="Layout-width">
-                    <NewsLatestPopular name="News" showCategs categOne="Latest" categTwo="Popular" seeAll >
+                    <NewsLatestPopular name="Latest News" stripe >
                         <NewsCard />
-                       
+                        <NewsCard />
+                        <NewsCard />
+                        <NewsCard />
                     </NewsLatestPopular>
                 </div>
                     <Events />
                 <div className="Layout-width">
-                    <TalksCategory name="Talks" />
+                    <TalksCategory name="See more" />
                     <StartupBanner />
                     <div className="Poll-and-MobileApp">
-                       <Poll />
-                       <MobileApp />
+                       <NewsLetterMobileAppBanner />
                     </div>
                 </div>
             </section>

@@ -25,7 +25,7 @@
 		}
 
 		p{
-			margin:1.5em 0;
+			margin-bottom:1em;
 		}
 
 		.ContentBox--wrp{
@@ -46,6 +46,7 @@
 				padding:.25em .5em;
 				margin-right: .75em;
     			margin-bottom: .75em;
+    			
     			&:hover{
     				background:$white;
     				button{
@@ -77,7 +78,7 @@
 		.BigBox{
 			flex-basis:100%;
 			@include img-crop--parent($IntroBoxes-BigBoxIMG);
-			img{
+			> img{
 				@include img-crop;
 			}
 		}
@@ -110,13 +111,15 @@
 				flex-basis:47.75%;
 			}
 
-			img{
+			> img{
 				@include img-crop;
 			}
 		}
 
 		.Testimonial{
-			height:auto;
+			@media #{$MAXmedium-40} {
+				height:auto;
+			}
 			display:flex;
 			padding:1em;
 			background:$light-blue;

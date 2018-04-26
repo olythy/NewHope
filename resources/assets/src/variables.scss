@@ -111,20 +111,19 @@ $larg-larg60: "screen and (min-width: 48em) and (max-width:60em)";
 @mixin before-line($bg){
     content: '';
     width: 60px;
-    height: 70%;
+    height: 60%;
     background: repeating-linear-gradient(-45deg, $grey9, $white 3px, transparent 3px, transparent 6px), $bg;
     background-size:cover;
     background-repeat: no-repeat;
     background-position: bottom;
     position: absolute;
+    left:auto;
     right: 0;
     top: 0;
-    @media #{$larg} {
-        height:100%;
-    }
     @media #{$extra-larg} {
         left:0;
         right:auto;
+        height:100%;
     }
 }
 
@@ -161,7 +160,7 @@ $NewsCardHeight: 120px;
 $SpeakerCardHeight: 315px;
 $SpeakerCardHighLightedIMG : 430px;
 
-$IntroBoxes-BigBoxIMG : 270px;
+$IntroBoxes-BigBoxIMG : 240px;
 $IntroBoxes-SmallBoxMobileIMG : 160px;
 $IntroBoxes-SmallBoxDesktopIMG : 240px;
 

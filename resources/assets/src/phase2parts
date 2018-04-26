@@ -85,3 +85,105 @@ ticket sign up kuka
 investor kuka global startup
 
 startup news
+
+
+<span className="Article-likeNumber">34</span>
+                  <img className="Article-like" src="/storage/Gfx/News/Article/article-like.svg" alt="Like this Article" />
+
+
+                  <div className="NewsArticlePage--sponsor">
+                                             <div className="NewsArticlePage--sponsor---logo">
+                                                <img src="/storage/Gfx/Events/Sponsors/sponsorlogo-workday.svg" alt="IMG" />
+                                             </div>
+                                             <h5>Article sponsored by Workday</h5>
+                                          </div>
+                                          <div className="NewsArticlePage--tags">
+                                             <span>Talent &amp; Recruitment</span>
+                                             <span>Smart Data</span>
+                                             <span>Recruitment</span>
+                                          </div>
+
+
+
+                                          <div className="SpeakerCardHighLight--social">
+								<img className="Social--youtube" src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
+								<img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
+								<img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
+							</div>
+
+
+
+<div className="Headline">
+					<div className="Headline--title">
+						<h2>Hotels in the Area</h2>
+					</div>
+					<div className="Stripe"></div>
+				</div>
+				<div className="Travel--hotels">
+					<HotelCard name="Novotel Amsterdam Excel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Moxy"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Hampton by Hilton"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="ExCel London"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Random Hotel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Novotel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+				   
+					</div>
+
+
+<div className="PromoBoxes--wrp">
+					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-startups.jpg" name="Unleash Mobile App" btnName="View" btnLink="/amsterdam/travel" />
+					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-TravelAMS-floorplan.jpg" name="Event Floorplan" btnName="Learn More" btnLink="/amsterdam/travel" />
+					<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-TravelAMS-flying.jpg" name="Partners in Flying" btnName="Learn More" btnLink="/amsterdam/travel" />
+				</div>
+				<div className="Headline">
+					<div className="Headline--title">
+						<h2>Hosting Hotel</h2>
+					</div>
+					<div className="Stripe"></div>
+				</div>
+				<HotelHighLightCard />
+				<div className="Headline">
+					<div className="Headline--title">
+						<h2>Hotels in the Area</h2>
+					</div>
+					<div className="Stripe"></div>
+				</div>
+				<div className="Travel--hotels">
+					<HotelCard name="Novotel Amsterdam Excel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Moxy"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Hampton by Hilton"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="ExCel London"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Random Hotel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+					<HotelCard name="Novotel"
+							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
+							   />
+				   
+					</div>
+
+
+@include img-crop--parent(470px);
+		img{
+			@include img-crop;
+		}

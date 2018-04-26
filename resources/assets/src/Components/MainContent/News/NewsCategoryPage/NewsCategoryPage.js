@@ -15,7 +15,7 @@ class NewsCategoryPage extends Component {
                               <div className="NewsCategoryPage--title">
                                  <h1>Employee experience</h1>
                               </div>
-                              <NewsLatestPopular showCategs categOne="Latest" categTwo="Popular" stripe >
+                              <NewsLatestPopular showCategs categOne="Latest" stripe >
                                     <NewsCardHighLight />
                                     <div className="NewsCategoryPage--flexfix">
                                        <NewsCard />

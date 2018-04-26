@@ -22,8 +22,8 @@ const ContactPerson = props => (
 						<Link to={"mailto:"+props.contactMail}>{props.contactMail}</Link>
 						<div>
 							<div className="SpeakerCardHighLight--social">
-								<img className="Social--linkedin" src={props.contactLinkedin} alt="Linkedin" />
-								<img className="Social--twitter" src={props.contactTwitter} alt="Twitter" />
+								<Link to={props.contactLinkedin} target="_blank"><img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin" /></Link>
+								{props.contactTwitter ? <Link to={props.contactTwitter} target="_blank"><img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter" /></Link> : null }
 							</div>
 						</div>
 					</div>

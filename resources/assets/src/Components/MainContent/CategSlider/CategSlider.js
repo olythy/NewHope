@@ -72,15 +72,12 @@ class CategSlider extends Component {
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
 					        <div><Link to="/news">All news</Link></div>
-					        <div><Link to="/news/categpage">Future of Work</Link></div>
-					        <div><Link to="/news/categpage">Smart Data</Link></div>
-					        <div><Link to="/news/categpage">Recruitment</Link></div>
-					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
-					        <div><Link to="/news/categpage">Employee Experience</Link></div>
-					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
-					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
-					        <div><Link to="/news/categpage">Other Stuff</Link></div>
-					        <div><Link to="/news/categpage">Whats this?</Link></div>
+					        <div><Link to="/news/categpage">Leadership</Link></div>
+					        <div><Link to="/news/categpage">Diversity &amp; Inclusion</Link></div>
+					        <div><Link to="/news/categpage">Laws & Regulation</Link></div>
+					        <div><Link to="/news/categpage">Science &amp; Tech</Link></div>
+					        <div><Link to="/news/categpage">Culture</Link></div>
+					        <div><Link to="/news/categpage">UNLEASH News</Link></div>
 					     </Slider>
 					</div>
 				</section>
@@ -91,15 +88,12 @@ class CategSlider extends Component {
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
 					        <div><Link to="/news">All news</Link></div>
-					        <div><Link to="/news/categpage">Future of Work</Link></div>
-					        <div><Link to="/news/categpage">Smart Data</Link></div>
-					        <div><Link to="/news/categpage">Recruitment</Link></div>
-					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
-					        <div><Link to="/news/categpage">Employee Experience</Link></div>
-					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
-					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
-					        <div><Link to="/news/categpage">Other Stuff</Link></div>
-					        <div><Link to="/news/categpage">Whats this?</Link></div>
+					        <div><Link to="/news/categpage">Leadership</Link></div>
+					        <div><Link to="/news/categpage">Diversity &amp; Inclusion</Link></div>
+					        <div><Link to="/news/categpage">Laws & Regulation</Link></div>
+					        <div><Link to="/news/categpage">Science &amp; Tech</Link></div>
+					        <div><Link to="/news/categpage">Culture</Link></div>
+					        <div><Link to="/news/categpage">UNLEASH News</Link></div>
 					     </Slider>
 					</div>
 				</section>
@@ -110,15 +104,12 @@ class CategSlider extends Component {
 	   		 		<div className="Layout-width">
 						<Slider {...settings}>
 					        <div><Link to="/news">All news</Link></div>
-					        <div><Link to="/news/categpage">Future of Work</Link></div>
-					        <div><Link to="/news/categpage">Smart Data</Link></div>
-					        <div><Link to="/news/categpage">Recruitment</Link></div>
-					        <div><Link to="/news/categpage">HR Tech Analysts</Link></div>
-					        <div><Link to="/news/categpage">Employee Experience</Link></div>
-					        <div><Link to="/news/categpage">Talent & Recruitment</Link></div>
-					        <div><Link to="/news/categpage">Wellbeing & Engagement</Link></div>
-					        <div><Link to="/news/categpage">Other Stuff</Link></div>
-					        <div><Link to="/news/categpage">Whats this?</Link></div>
+					        <div><Link to="/news/categpage">Leadership</Link></div>
+					        <div><Link to="/news/categpage">Diversity &amp; Inclusion</Link></div>
+					        <div><Link to="/news/categpage">Laws & Regulation</Link></div>
+					        <div><Link to="/news/categpage">Science &amp; Tech</Link></div>
+					        <div><Link to="/news/categpage">Culture</Link></div>
+					        <div><Link to="/news/categpage">UNLEASH News</Link></div>
 					     </Slider>
 					</div>
 				</section>

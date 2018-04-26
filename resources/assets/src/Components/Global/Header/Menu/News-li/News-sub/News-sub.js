@@ -12,19 +12,12 @@ const NewsSub = props => (
 				<div className="Stripe"></div>
 			</div>
 			<ul className="App-header--subul">
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">HR Technology</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Talent &amp; Recruitment</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Future of Work</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Employee Experience</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Smart Data</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">HR Tech World</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Smart Data</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">HR Tech World</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Employee Experience</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Talent &amp; Recruitment</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Future of Work</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Smart Data</Link></li>
-				<li onClick={props.toggleMenu} className="App-header--subli all"><Link onClick={props.closeLi} to="/news">All news</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Leadership</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Science &amp; Tech</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Diversity & Inclusion</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Culture</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">Laws &amp; Regulation</Link></li>
+				<li onClick={props.toggleMenu} className="App-header--subli"><Link onClick={props.closeLi} to="/news/categpage">UNLEASH News</Link></li>
 			</ul>
 		</div>
 		<div className="App-header--highlight">

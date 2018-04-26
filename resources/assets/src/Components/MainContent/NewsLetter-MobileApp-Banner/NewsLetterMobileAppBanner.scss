@@ -1,12 +1,10 @@
 
 .NewsLetterMobileApp-Banner{
 	display:flex;
-    margin-top:2em;
     margin-bottom:3em;
 	flex-direction:column;
 	@media #{$larg} {
     	flex-direction:row;
-        margin-top:3em;
         margin-bottom:4.5em;
     }
 
@@ -72,6 +70,26 @@
     		}
 
     	}
+        .mobileApp--btn{
+            background: $white;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            padding: 1em;
+            padding-left: 40px;
+            font-size: 14px;
+            font-weight:bold;
+            position:relative;
+            &:before{
+                content: url(/storage/Gfx/MobileApp/download.svg);
+                position: absolute;
+                top: 12px;
+                left: 10px;
+            }
+            &:hover{
+                border:1px solid $black;
+                cursor:pointer;
+            }
+        }
 	}
 	.MobileApp-Banner--iphoneBG{
 		flex-basis:40%;
@@ -85,8 +103,17 @@
 			@media #{$extra-larg} {
     			display:block;
     			position: absolute;
-    			bottom: -3em;
+    			bottom: -50px;
     		}			
 		}
 	}
+}
+
+//CATEGORY PAGE MARGIN
+
+.NewsCategoryPage .NewsLetterMobileApp-Banner,.NewsArticlePage .NewsLetterMobileApp-Banner{
+    margin-top:2em;
+    @media #{$larg} {
+        margin-top:3em;
+    }
 }

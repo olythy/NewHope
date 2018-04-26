@@ -9,7 +9,7 @@ const NewsCard = props => (
   		<Link to="/news/categpage/article"><h5>How Can Your Company Work to Eliminate the Gender Pension Gap?</h5></Link>
   		<div className="News-card--details---spns">
         <span className="News-card--author-category">Alex Cooper <div className="DOT">&middot;</div> <Link to="/news/categpage">Category</Link></span>
-  		  <span className="News-card--date">Jan 15, 2018 <div className="DOT">&middot;</div> 5 min read</span>
+  		  <span className="News-card--date">Jan 15, 2018</span>
       </div>
   	</div>
   	<div className="News-card--preview">

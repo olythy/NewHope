@@ -21,19 +21,23 @@ class SponsorsAMS extends Component {
 						<div className="TextBox--Text">
 							<div className="Headline">
 								<div className="Headline--title">
-									<h2>Sponsoring unleash</h2>
+									<h2>WHY SPONSOR?</h2>
 								</div>
 							</div>
-							<p>Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the echnologies and ways to apply them that will have the greatest potential impact and value. Join the movers and shakers!</p>
+							<p>UNLEASH is the leading show on Future of Work and HR Technology both in terms of content provided by hundreds of speakers and deal-making on our expo floors. With the largest group of C-Suite buyers in the industry attending our shows, large enterprises to the next innovators from around the world will want to attend UNLEASH World Conference & Expo in Amsterdam this October. With a global footprint that influences over 55 million employees worldwide, no other community is having such a powerful impact on shaping the way the world works!</p>
 						</div>
 						<OneLineTestimonial 
 							smallSrcOne="/storage/Gfx/Testimonial/oneLine-AMSSponsors-smallOne.jpg"
 							smallSrcTwo="/storage/Gfx/Testimonial/oneLine-AMSSponsors-smallTwo.jpg"
+							testimonialText="Great experience again for us – we have met our biggest customers and many strong new prospects!"
+							logo="/storage/Gfx/Testimonial/testimonial-SAP.png" alt="SAP Success Factors"
 						/>
 						<OneLineTestimonial
 							cls="reverse" 
 							smallSrcOne="/storage/Gfx/Testimonial/oneLine-AMSSponsors-smallTwo.jpg"
 							smallSrcTwo="/storage/Gfx/Testimonial/oneLine-AMSSponsors-smallOne.jpg"
+							testimonialText="As we are looking at buying new solutions, UNLEASH gave us the best opportunity to meet with the right vendors. Excellent!"
+							logo="/storage/Gfx/Testimonial/testimonial-hertz.png" alt="Hertz"
 						/>
 					</div>
 					<div className="Headline">
@@ -55,7 +59,7 @@ class SponsorsAMS extends Component {
 				</div>
 				<div className="GreyBG-72">
 					<div className="Layout-width">
-						<TalksCategory name="Sponsor Interviews" />
+						<TalksCategory name="See More" />
 					</div>
 				</div>
 			</section>	

@@ -59,33 +59,6 @@ const TravelUSA = () => (
 					<div className="Stripe"></div>
 				</div>
 				<HotelHighLightCard />
-				<div className="Headline">
-					<div className="Headline--title">
-						<h2>Hotels in the Area</h2>
-					</div>
-					<div className="Stripe"></div>
-				</div>
-				<div className="Travel--hotels">
-					<HotelCard name="Novotel Amsterdam Excel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Moxy"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Hampton by Hilton"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="ExCel London"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Random Hotel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-					<HotelCard name="Novotel"
-							   src="/storage/Gfx/Events/Travel/HotelCard-img.png"
-							   />
-				   
-					</div>
 			</div>
 		</div>
 		<ContactPerson 

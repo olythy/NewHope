@@ -37,10 +37,6 @@
 
 	.BigBox{
 		flex-basis:40%;
-		@include img-crop--parent(470px);
-		img{
-			@include img-crop;
-		}
 	}
 
 	.BigBox--wrp{
@@ -90,6 +86,10 @@
 	@media #{$larg-60} {
 		flex-direction:row;
 	}
+
+	.testimonial--logo{
+		margin-top:2em;
+	}
 	.ImgBoxes--wrp{
 		flex-basis:49%;
 
@@ -113,6 +113,7 @@
 		}
 		.ImgBoxes--wrp .Testimonial{
 			background:$dark-blue;
+			color:$white;
 		}
 	}
 	&.orange{

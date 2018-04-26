@@ -24,11 +24,6 @@ class SpeakerCardHighLight extends Component {
 					<div className="SpeakerCardHighLight--wrp">
 						<div className="SpeakerCardHighLight--name-and-social">
 							<h1>{this.props.speakerName}</h1>
-							<div className="SpeakerCardHighLight--social">
-								<img className="Social--youtube" src="/storage/Gfx/Events/Speakers/speaker-youtube.svg" alt="Youtube"/>
-								<img className="Social--linkedin" src="/storage/Gfx/Events/Speakers/speaker-linkedin.svg" alt="Linkedin"/>
-								<img className="Social--twitter" src="/storage/Gfx/Events/Speakers/speaker-twitter.svg" alt="Twitter"/>
-							</div>
 						</div>
 						<div className="SpeakerCardHighLight--jobTitle">
 							<h5>{this.props.jobTitle}<div className="DOT">&middot;</div>{this.props.company}</h5>

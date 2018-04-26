@@ -235,8 +235,8 @@ class StartupAMS extends Component {
 			  		contactName="Anna Ott"
 			  		contactJobTitle="Head of unleash Startup"
 			  		contactMail="anna@unleashgroup.io"
-			  		contactLinkedin="/storage/Gfx/Events/Speakers/speaker-linkedin.svg"
-			  		contactTwitter="/storage/Gfx/Events/Speakers/speaker-twitter.svg"
+			  		contactLinkedin="https://www.linkedin.com/in/annaott"
+			  		contactTwitter="https://twitter.com/frauott"
 				/>
 				
 			</section>

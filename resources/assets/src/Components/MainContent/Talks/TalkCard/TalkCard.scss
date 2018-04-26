@@ -19,6 +19,7 @@
 
 .Talk-card--details{
 	padding:1em;
+	min-height:100px;
 }
 
 .Talk-card--preview{
@@ -42,6 +43,7 @@
 
 .Talk-card--date{
 	color:$grey2;
+	margin-top:.5em;
 }
 
 // IN THE HEADER

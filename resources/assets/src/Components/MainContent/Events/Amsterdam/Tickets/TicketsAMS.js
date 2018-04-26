@@ -9,7 +9,16 @@ import TicketCard from '../../Tickets/TicketCard/TicketCard'
 const TicketsAMS = () => (
 	<section className="Tickets Amsterdam">
 		<SubMenuAMS active="Tickets"/>
-		<TicketsHeader eventName="UNLEASH World Conference & Expo" eventCity="Amsterdam" eventVenue="RAI" eventDate="23-24 October 2018" h1="Tickets" btnName="Sign up" />
+		<TicketsHeader eventName="UNLEASH World Conference & Expo" eventCity="Amsterdam" eventVenue="RAI" eventDate="23-24 October 2018" h1="Tickets" btnName="Sign up">
+			<div className="Ticket-timeLine--first"><h4>Super Saver</h4></div>
+          	<div className="Ticket-timeLine--current">
+          		<h2>Early Bird</h2>
+          		<span>Until 31 June 2018</span>
+          	</div>
+			<div><h4>Regular Ticket</h4></div>          	
+          	<div><h4>Late Ticket</h4></div>
+          	<div className="Ticket-timeLine--last"><h4>Onsite Ticket</h4></div>
+		</TicketsHeader>
 		<div className="Tickets--wrp Single">
 			<div className="Layout-width">
 				<div className="Headline">
@@ -22,32 +31,23 @@ const TicketsAMS = () => (
 		          	<div>
 		          		<TicketCard 
 		          			ticketType="Single ticket"
-		          			ticketPeriod="Super saver"
-		          			ticketName="Expo Only"
+		          			ticketPeriod="Early Bird"
+		          			ticketName="Executive / Investor"
 		          			currency="&euro;"
-		          			price="900"
-		          			saving="Save &euro;120 off regular ticket price"
-		          			bookingPlace="/amsterdam/tickets" />
+		          			price="1356"
+		          			saving="Save &euro;339 off regular ticket price"
+		          			bookingPlace="https://unleash.swoogo.com/unleashamsterdam/application?reg_type_id=23292" />
 		          	</div>
 		          	<div>
-		          		<TicketCard 
+		          		<TicketCard
+		          			expo 
 		          			ticketType="Single ticket"
-		          			ticketPeriod="Super saver"
+		          			ticketPeriod="Early Bird"
 		          			ticketName="Expo Only"
 		          			currency="&euro;"
-		          			price="900"
-		          			saving="Save &euro;120 off regular ticket price"
-		          			bookingPlace="/amsterdam/tickets" />
-		          	</div>
-		          	<div>
-		          		<TicketCard 
-		          			ticketType="Single ticket"
-		          			ticketPeriod="Super saver"
-		          			ticketName="Expo Only"
-		          			currency="&euro;"
-		          			price="900"
-		          			saving="Save &euro;120 off regular ticket price"
-		          			bookingPlace="/amsterdam/tickets" />
+		          			price="299"
+		          			saving="."
+		          			bookingPlace="https://unleash.swoogo.com/unleashamsterdam/application?reg_type_id=23297" />
 		          	</div>
 				</DragScroll>
 			</div>
@@ -64,89 +64,29 @@ const TicketsAMS = () => (
 		          	<div><TicketCard 
 				          			ticketType="Group ticket"
 				          			ticketPeriod="Early Bird"
-				          			ticketName="Standard conference &amp; Expo"
+				          			ticketName="Team 18 or more"
 				          			currency="&euro;"
-				          			price="1,230"
-				          			saving="Save &euro;90 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
+				          			price="1,102"
+				          			saving="Save &euro;593 /ticket"
+				          			bookingPlace="https://unleash.swoogo.com/unleashamsterdam/application?reg_type_id=23304" />
 				          	</div>
 		          	<div><TicketCard 
 				          			ticketType="Group ticket"
 				          			ticketPeriod="Early Bird"
-				          			ticketName="Standard conference &amp; Expo"
+				          			ticketName="Team 13 or more"
 				          			currency="&euro;"
-				          			price="1,230"
-				          			saving="Save &euro;90 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
+				          			price="1,187"
+				          			saving="Save &euro;508 / ticket"
+				          			bookingPlace="https://unleash.swoogo.com/unleashamsterdam/application?reg_type_id=23301" />
 				          	</div>
 		          	<div><TicketCard 
 				          			ticketType="Group ticket"
 				          			ticketPeriod="Early Bird"
-				          			ticketName="Standard conference &amp; Expo"
+				          			ticketName="Team 8 or more"
 				          			currency="&euro;"
-				          			price="1,230"
-				          			saving="Save &euro;90 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
-				          	</div>
-				</DragScroll>
-			</div>
-		</div>
-		<div className="Tickets--wrp Investors">
-			<div className="Layout-width">
-				<div className="Headline">
-					<div className="Headline--title">
-						<h2>Investors Tickets</h2>
-					</div>
-					<div className="Stripe"></div>
-				</div>
-				<DragScroll className="drag" width height>
-		          	<div><TicketCard 
-				          			ticketType="Investor ticket"
-				          			ticketPeriod="Regular"
-				          			ticketName="Expo Only"
-				          			currency="&euro;"
-				          			price="1,720"
-				          			saving="Save &euro;550 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
-				          	</div>
-		          	<div><TicketCard 
-				          			ticketType="Investor ticket"
-				          			ticketPeriod="Regular"
-				          			ticketName="Expo Only"
-				          			currency="&euro;"
-				          			price="1,720"
-				          			saving="Save &euro;550 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
-				          	</div>
-				</DragScroll>
-			</div>
-		</div>
-		<div className="Tickets--wrp Startup">
-			<div className="Layout-width">
-				<div className="Headline">
-					<div className="Headline--title">
-						<h2>Startup Tickets</h2>
-					</div>
-					<div className="Stripe"></div>
-				</div>
-				<DragScroll className="drag" width height>
-		          	<div><TicketCard 
-				          			ticketType="Startup ticket"
-				          			ticketPeriod="Regular"
-				          			ticketName="Expo Only"
-				          			currency="&euro;"
-				          			price="1,720"
-				          			saving="Save &euro;550 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
-				          	</div>
-		          	<div><TicketCard 
-				          			ticketType="Startup ticket"
-				          			ticketPeriod="Regular"
-				          			ticketName="Expo Only"
-				          			currency="&euro;"
-				          			price="1,720"
-				          			saving="Save &euro;550 off regular ticket price"
-				          			bookingPlace="/amsterdam/tickets" />
+				          			price="1,271"
+				          			saving="Save &euro;424 / ticket"
+				          			bookingPlace="https://unleash.swoogo.com/unleashamsterdam/application?reg_type_id=23300" />
 				          	</div>
 				</DragScroll>
 			</div>

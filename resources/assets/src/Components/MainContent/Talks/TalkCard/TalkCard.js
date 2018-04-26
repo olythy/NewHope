@@ -13,9 +13,8 @@ const TalkCard = props => (
       </div>
   	</div>
   	<div className="Talk-card--details">
-  		<h5>How Can Your Company Work to Eliminate the Gender Pension Gap?</h5>
-  		<span className="Talk-card--category">Category</span>
-  		<span className="Talk-card--date">Jan 15, 2018 <div className="DOT">&middot;</div> 816 views</span>
+  		<h5>{props.title}</h5>
+  		<span className="Talk-card--date">{props.published}</span>
   	</div>
   </div>
 )

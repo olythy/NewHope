@@ -26,7 +26,6 @@ class NewsArticlePage extends Component {
       }
 
       render(){
-            console.log(this.state.waypoint)
             return(
                   <section className="NewsArticlePage">
                         <div className="Layout-width">
@@ -34,9 +33,7 @@ class NewsArticlePage extends Component {
                               <div className="NewsArticlePage--details">
                                     <span>Felix<div className="DOT">&middot;</div></span>
                                     <Link to="#"><span>Future of Work<div className="DOT">&middot;</div></span></Link>
-                                    <span>Jan 15, 2018<div className="DOT">&middot;</div></span>
-                                    <span>5 min read<div className="DOT">&middot;</div></span>
-                                    <span>Sponsored by Workday</span>
+                                    <span>Jan 15, 2018</span>
                               </div>
                            <Waypoint onLeave={this.enterWaypoint} onEnter={this.leaveWaypoint} >
                               <div className="NewsArticlePage--mainIMG">
@@ -75,31 +72,11 @@ class NewsArticlePage extends Component {
                                           <p>They will be squashed between the hiring manager and the 3rd party recruiter, and this is why: AI and machine intelligence put more control and power into the hiring manager’s hands. The machine learns from their hiring decisions, therefore producing more accurate shortlists and hiring suggestions. This will become even acuter as companies like Elevate Direct become more prevalent, offering platforms that allow for complete talent self-sufficiency.</p>
                                           <p>They will be squashed between the hiring manager and the 3rd party recruiter, and this is why: AI and machine intelligence put more control and power into the hiring manager’s hands. The machine learns from their hiring decisions, therefore producing more accurate shortlists and hiring suggestions. This will become even acuter as companies like Elevate Direct become more prevalent, offering platforms that allow for complete talent self-sufficiency.</p>
                                           </div>
-                                          <div className="NewsArticlePage--sponsor">
-                                             <div className="NewsArticlePage--sponsor---logo">
-                                                <img src="/storage/Gfx/Events/Sponsors/sponsorlogo-workday.svg" alt="IMG" />
-                                             </div>
-                                             <h5>Article sponsored by Workday</h5>
-                                          </div>
-                                          <div className="NewsArticlePage--tags">
-                                             <span>Talent &amp; Recruitment</span>
-                                             <span>Smart Data</span>
-                                             <span>Recruitment</span>
-                                          </div>    
+                                              
                                           <Share className="bottom" />
                                           <div className="contentAfter-waypoint"><Waypoint onEnter={this.leaveWaypoint} /></div>
                                           <NewsLetterMobileAppBanner />
                                     </div>
-                                 </div>
-                              </div>
-                              <div className="GreyBG-72">
-                                 <div className="Layout-width">      
-                                    <NewsLatestPopular name="Related">
-                                          <NewsCard />
-                                          <NewsCard />
-                                          <NewsCard />
-                                          <NewsCard />
-                                    </NewsLatestPopular>
                                  </div>
                               </div>
                   </section>

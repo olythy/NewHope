@@ -4,14 +4,30 @@
 	justify-content:space-between;
 }
 
+.boxStripe{
+    flex-basis:100%;
+    @media #{$larg} {
+        flex-basis:31.75%;
+    }
+
+    &:after{
+        content: '';
+        width: 94%;
+        height: 16px;
+        display: block;
+        background: repeating-linear-gradient(-45deg, #ECEBEC, #ECEBEC 3px, transparent 3px, transparent 6px);
+    }
+}
+
 .PromoBox{
-	flex-basis:100%;
+	
 	margin-top:1em;
 	cursor:pointer;
 	color:$white;
-	@include img-crop--parent(220px);
+	
+    @include img-crop--parent(220px);
+
 	@media #{$larg} {
-    	flex-basis:31.75%;
         margin-top:0;
     }
 

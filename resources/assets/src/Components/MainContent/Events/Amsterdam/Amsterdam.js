@@ -4,8 +4,6 @@ import DragScroll from 'react-dragscroll';
 import SubMenuAMS from '../SubMenu/SubMenuAMS/SubMenuAMS'
 import Button from '../../Commons/Button/Button'
 
-import AgendaPreview from '../../Agenda/AgendaPreview/AgendaPreview'
-
 import SpeakerCard from '../Speakers/SpeakerCard/SpeakerCard'
 import SpeakerCardHighLight from '../Speakers/SpeakerCard/SpeakerCardHighLight/SpeakerCardHighLight'
 import BecomeCard from '../BecomeCard/BecomeCard'
@@ -24,10 +22,6 @@ import NewsLatestPopular from '../../News/NewsLatestPopular/NewsLatestPopular'
 
 class Amsterdam extends Component {
 
-	constructor(props){
-		super(props);
-	}
-
 	render(){
 		return(
 			<section className="EventPage Amsterdam">
@@ -38,7 +32,7 @@ class Amsterdam extends Component {
 				<div className="Layout-width">
 					<div className="Intro--wrp">
 						<IntroText
-							h2="THE FUTURE OF WORK IS AMS"
+							h2="THE FUTURE OF WORK IS NOW"
 							p="Human Resources is not only HR’s responsibility anymore. It’s up to our leaders, innovators, influencers and each of you to determine how we can transform organizations and identify the technologies and ways to apply them that will have the greatest potential impact and value. Brought to you by the team behind UNLEASH World Conference & Expo (formerly HR Tech World)"
 						/>
 						<HeadlineSponsorsBox
@@ -59,24 +53,20 @@ class Amsterdam extends Component {
 							<div className="ContentBox--inner">
 								<div className="ContentBox--wrp">
 							      <h2>Conference &amp; Expo</h2>
-							      <p>The expo at Unleash is more than just a showcase of vendors - it’s full of interactivity, excitement, fun, friendships and entertainment. Its where those shaping the future of work and technology – from large enterprises to the next innovators from around the world – network and meet up.</p>
+							      <p>The expo at UNLEASH is more than just a showcase of vendors - it’s full of interactivity, excitement, fun, friendships and entertainment. Its where those shaping the future of work and technology – from large enterprises to the next innovators from around the world – network and share ideas.</p>
 							    </div>
 							    <div className="ContentBox--topics">
 								     <h2>See our topics</h2>
-								     <span><Button name="Future of Work" cls={null} topic topicTitle="Future of Work" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Smart Data" cls={null} topic topicTitle="Smart Data" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Recruitment" cls={null} topic topicTitle="Recruitment" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Talent & Recruitment" cls={null} topic topicTitle="Talent & Recruitment" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Wellbeing & Engagement" cls={null} topic topicTitle="Wellbeing & Engagement" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Adoption" cls={null} topic topicTitle="Adoption" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="HR Tech Analysts" cls={null} topic topicTitle="HR Tech Analysts" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Think-Thank" cls={null} topic topicTitle="Think-Thank" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Employee Experience" cls={null} topic topicTitle="Employee Experience" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Going Digital" cls={null} topic topicTitle="Going Digital" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Startup Stage" cls={null} topic topicTitle="Startup Stage" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="HR Technology" cls={null} topic topicTitle="HR Technology" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Learning" cls={null} topic topicTitle="Learning" topicText="This is a Topic Text example" /></span>
-								     <span><Button name="Product Demos" cls={null} topic topicTitle="Product Demos" topicText="This is a Topic Text example" /></span> 
+								     <span><Button name="Main Stage" cls={null} topic topicTitle="Main Stage" topicText="UNLEASH your people with the top minds in the Future of Work and technology. Our Main Stage packs the punch with experts from the most influential companies. These are the folks revolutionizing our world today. Over two days, our Main Stage will be the place to be for your utmost attention as we traverse and navigate technological disruptions and cultural shifts in the world of work with the help of these bold and courageous leaders." /></span>
+								     <span><Button name="HR TECH" cls={null} topic topicTitle="HR TECH" topicText="Continuing our tradition of bringing you the latest in the Future of Work, this track takes you through real world examples of the use of tech in HR. We’ve got you covered with talks focusing on chatbots, AI, UX for employees, VR, and everything in between. Our expert speakers will also remind you to include the “human element” in the ever-increasing tech and digital-focused workplace." /></span>
+								     <span><Button name="Recruitment" cls={null} topic topicTitle="Recruitment" topicText="In the age of shifting trends in recruitment it’s more important than ever to be up to date on the best practices and where the recruiting world is headed. The Recruitment track is the best place to find out the strategies top organizations are adopting, from recruiting Gen Z to approaching the gig economy. We’ll provide you the opportunity to learn how recruiters are tackling other issues like fighting ageism and sexism along with returning employees and untapped talent wells." /></span>
+								     <span><Button name="Smart Data" cls={null} topic topicTitle="Smart Data" topicText="Year after year, organizations are realizing the importance of people analytics in the workplace. Here, you’ll get the scoop on making data the perfect bridge between HR and your company’s business strategy. We’ll give you the tools to step away from excel spreadsheets and find top analytics programs to amplify the data collection and processing in your company." /></span>
+								     <span><Button name="Wellbeing & Inclusion" cls={null} topic topicTitle="Wellbeing & Inclusion" topicText="Your employees are the cornerstone of your company, and in this track, you’ll find the latest ways that companies are unleashing their employees’ potentials and take your workforce to the next level. Our speakers will guide you through their experiences using reverse mentoring, behavioral economics, internal training programs, and a wide variety of other methods to expand their employee’s skill set." /></span>
+								     <span><Button name="Reboot HR" cls={null} topic topicTitle="Reboot HR" topicText="Need to see ideas in action? Or discuss how your organization will take it to the next level? UNLEASH’s Reboot HR is an intimate session that gives you a more hands on approach to where our workforce is headed. Chaired by experts in the world of work, this is your opportunity ask real questions and receive informative feedback on various topics from workplace happiness to recruiting your next brilliant employee." /></span>
+								     <span><Button name="Adoption" cls={null} topic topicTitle="Adoption" topicText="Technology is useless unless you know how to use it. If you’ve been apprehensive about your tech, fear no more! Our Adoption tracks gives you a crash course on implementation of HR tech in your organization. Listen as practitioners give you their advice on best practices to get the most bang for your buck when shifting technology in your company." /></span>
+								     <span><Button name="Talent Management" cls={null} topic topicTitle="Talent Management" topicText="How can your company create the ideal environment for your employees? Look no further than this dedicated track on maintaining your talent and ensuring they are living the life at your workplace. We have experts speaking on wellbeing programs to increasing engagement with the rise of AI and machine learning. Find the sweet spot for employee engagement and creating a positive company culture right here over the 2 days." /></span>
+								     <span><Button name="Learning & Development" cls={null} topic topicTitle="Learning & Development" topicText="Training and development have never been more important than in today's fast-paced business environment. Learning technology is critical and getting it right even more so. Hear from senior learning practitioners and experts as they discuss innovative solutions to workplace learning and bring you insights into what works and what doesn't, as well as evaluating the steps you need to take to ensure you get technology that delivers on its promise." /></span>
+								     <span><Button name="HR Tech Analysts" cls={null} topic topicTitle="HR Tech Analysts" topicText="What does the future hold for HR Tech? Does HR Tech deliver the goods and who does it best? What do buyers and users really want from their suppliers, and where are those suppliers on the magic quadrant? Leading analysts will be here to guide you through their latest research into the realities of HR systems and technology. Join the experts and get objective information on the past, present and future of HR Technology." /></span>
 								</div>
 							</div>
 							}
@@ -89,11 +79,19 @@ class Amsterdam extends Component {
 					<div className="Speakers--wrp">
 						<div className="Headline">
 							<div className="Headline--title">
-								<h2>Our Speakers</h2>
+								<h2>Past Speakers</h2>
 							</div>
 							<div className="Stripe"></div>
 						</div>
-						<SpeakerCardHighLight />
+						<SpeakerCardHighLight
+							speakerIMG="/storage/Gfx/Events/Speakers/USA/garyHammel.png"
+							speakerName="Arianna Huffington"
+							jobTitle="Founder"
+							company="Huffington Post"
+							contentTitle="I want to help people and businesses thrive."
+							contentText="Named to Time Magazine's list of the world’s 100 most influential people, and the Forbes Most Powerful Women list, Arianna Huffington serves on numerous boards, including Uber and The Center for Public Integrity. She is also the founder of Huffington Post, the founder and CEO of Thrive Global, mother, sister, flat shoe advocate, sleep evangelist and the author of fifteen books, including, most recently, Thrive and The Sleep Revolution."
+							bio="I want to help people and businesses thrive, ... take advantage of the connections between well-being and performance, and find and nurture their sense of purpose."
+						/>
 						<div className="SpeakerCards--wrp">
 							<SpeakerCard />
 							<SpeakerCard />
@@ -113,7 +111,13 @@ work together!" modalText="Become a speaker Example Text" />
 					<div className="Agenda--wrp">
 						<div className="Layout-width">
 							<NewsLatestPopular name="Agenda" showCategs categOne="Day 01" categTwo="Day 02">
-								<AgendaPreview />
+								<div className="Agenda--preview">
+									<DragScroll width height>
+										<div className="Agenda--preview---drag">
+											<img src="/storage/Gfx/Agenda/agenda-preview.jpg" alt="Agenda Preview" />
+										</div>
+									</DragScroll>
+								</div>
 							</NewsLatestPopular>
 							<div className="Agenda--HighlightSessions">
 								<div className="Headline">
@@ -159,7 +163,7 @@ work together!" modalText="Become a speaker Example Text" />
 						<div className="PromoBoxes--wrp">
 							<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-startups.jpg" name="Startups" smallText="Sponsor, speak and compete" btnName="Learn more" btnLink="/amsterdam/startup"/>
 							<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-sponsors.jpg" name="Sponsors" smallText="5000 decision makers under one roof" btnName="Learn more" btnLink="/amsterdam/sponsors"/>
-							<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-volunteers.jpg" name="Volunteering" smallText="Be a part of our shows" btnName="Learn more" btnLink="/amsterdam/volunteer"/>
+							<PromoBox src="/storage/Gfx/PromoBoxes/promoBox-TravelAMS-flying.jpg" name="Travel &amp; Venue" smallText="Discover the Venue" btnLink="/amsterdam/travel" btnName="Learn More" />
 						</div>
 						<TravelBanner discover="/amsterdam/travel" />
 						<div className="Testimonial--wrp">
