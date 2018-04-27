@@ -36,7 +36,7 @@ class WordpressApi
                 $posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=date&order=asc&page=' . $page));
                 //$posts = collect($this->getJson($this->url . 'posts/?_embed&filter[orderby]=modified&page=' . $page));
                 foreach ($posts as $post) {
-                    $this->info = sprintf (WHITE."Date:".NORMAL." %-20s ".WHITE."Mod:".NORMAL." %-20s ".WHITE."id:".NORMAL."%4u ".WHITE."slug:".NORMAL." %-70s ".WHITE."title:".NORMAL." %s\n",
+                    printf (WHITE."Date:".NORMAL." %-20s ".WHITE."Mod:".NORMAL." %-20s ".WHITE."id:".NORMAL."%4u ".WHITE."slug:".NORMAL." %-70s ".WHITE."title:".NORMAL." %s\n",
                         $post->date, $post->modified, $post->id, $post->slug, $post->title->rendered);
                     $this->syncArticle($post);
                 }
@@ -56,23 +56,79 @@ class WordpressApi
 
         if (!$found) {
             // redirect output to logfile /var/log/unleashimport.log in /etc/crontab
-            $this->info = sprintf ("Date: %-20s Mod: %-20s id:%4u slug: %-70s title: %s\n",
+            printf("Date: %-20s Mod: %-20s id:%4u slug: %-70s title: %s\n",
                         $data->date, $data->modified, $data->id, $data->slug, $data->title->rendered);
             return $this->createArticle($data);
-        }
-
-        // todo update
-        // $found = Articles::find($found['_id']);
-
-        // if ($found and $found->updated_at->format("Y-m-d H:i:s") < $this->carbonDate($data->modified)->format("Y-m-d H:i:s")) {
-        //     return $this->updatePost($found, $data);
-        // }
+        } else {
+			// update
+	        // get as object
+	        $found = Articles::find($found['_id']);
+#			print $found['id'] ; exit;
+            if ($found) {
+				$localmodified = $this->carbonDate($found->updated_at)->format("Y-m-d H:i:s");
+				$remotemodified= $this->carbonDate($data->modified)->format("Y-m-d H:i:s");
+				$now = date("Y-m-d H:i:s");
+				if ($remotemodified > $localmodified) {
+					printf("%-19s Updating: wp_id: %u Local: %s Remote %s title: %s\n", $now, $found->wp_id, $localmodified, $remotemodified, $data->title->rendered);
+	                $this->updateArticle($found, $data);
+//					exit;
+				}
+            }
+		}
     }
 
     protected function getJson($url)
     {
         $response = file_get_contents($url, false);
         return json_decode($response);
+    }
+
+    protected function updateArticle($found, $data)
+    {
+
+/*        $article = new Articles();
+        $article->_id = $_id;
+        $article->id = $data->id;
+        $article->wp_id = $data->id;
+        $article->title = $data->title->rendered;
+        $article->slug = $data->slug;
+        $article->featured_image = $this->featuredImage($data->_embedded);
+        $article->featured = ($data->sticky) ? 1 : null;
+        $article->excerpt = $data->excerpt->rendered;
+        $article->content = $data->content->rendered;
+        $article->format = $data->format;
+        $article->status = 'publish';
+        $article->published_at = $this->carbonDate($data->date);
+        $article->created_at = $this->carbonDate($data->date);
+        $article->updated_at = $this->carbonDate($data->modified);
+*/
+
+        $found->id = $data->id;
+        $found->wp_id = $data->id;
+        $found->title = $data->title->rendered;
+        $found->slug = $data->slug;
+        $found->featured_image = $this->featuredImage($data->_embedded);
+        $found->featured = ($data->sticky) ? 1 : null;
+        $found->excerpt = $data->excerpt->rendered;
+        $found->content = $data->content->rendered;
+        $found->format = $data->format;
+        $found->status = 'publish';
+        $found->published_at = $this->carbonDate($data->date);
+        $found->created_at = $this->carbonDate($data->date);
+        $found->updated_at = $this->carbonDate($data->modified);
+
+        try {
+//            $article->save();
+            $found->save();
+        } catch (\Exception $e) {
+//            echo $e->getTraceAsString();
+        }
+
+        $this->syncAuthor($found, $data->_embedded->author);
+        $this->syncCategory($found, $data->_embedded->{"wp:term"});
+        $this->syncTags($found, $data->_embedded->{"wp:term"});
+
+        // exit;
     }
 
     protected function createArticle($data)
@@ -88,7 +144,7 @@ class WordpressApi
         $article->content = $data->content->rendered;
         $article->format = $data->format;
         $article->status = 'publish';
-        $article->publishes_at = $this->carbonDate($data->date);
+        $article->published_at = $this->carbonDate($data->date);
         $article->created_at = $this->carbonDate($data->date);
         $article->updated_at = $this->carbonDate($data->modified);
 
